@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/squeak/!svn/ver/2149/trunk/platforms/Cross/plugins/SqueakFFIPrims
+END
+sqManualSurface.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/squeak/!svn/ver/2149/trunk/platforms/Cross/plugins/SqueakFFIPrims/sqManualSurface.c
+END
+sqFFI.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/squeak/!svn/ver/2149/trunk/platforms/Cross/plugins/SqueakFFIPrims/sqFFI.h
+END
