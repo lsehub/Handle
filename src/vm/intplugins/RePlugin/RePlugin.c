@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 23 September 2010 11:58:59 am 
+/* Automatically generated from Squeak on 8 October 2010 2:26:36 pm 
    by VMMaker 3.11.13
  */
 
@@ -87,9 +87,9 @@ static int lastAlloc = 0;
 static sqInt matchFlags;
 static const char *moduleName =
 #ifdef SQUEAK_BUILTIN_PLUGIN
-	"RePlugin 23 September 2010 (i)"
+	"RePlugin 8 October 2010 (i)"
 #else
-	"RePlugin 23 September 2010 (e)"
+	"RePlugin 8 October 2010 (e)"
 #endif
 ;
 static int netMemory = 0;

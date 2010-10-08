@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 23 September 2010 11:58:56 am 
+/* Automatically generated from Squeak on 8 October 2010 2:26:32 pm 
    by VMMaker 3.11.13
  */
 
@@ -66,9 +66,9 @@ extern
 struct VirtualMachine* interpreterProxy;
 static const char *moduleName =
 #ifdef SQUEAK_BUILTIN_PLUGIN
-	"JPEGReadWriter2Plugin 23 September 2010 (i)"
+	"JPEGReadWriter2Plugin 8 October 2010 (i)"
 #else
-	"JPEGReadWriter2Plugin 23 September 2010 (e)"
+	"JPEGReadWriter2Plugin 8 October 2010 (e)"
 #endif
 ;
 

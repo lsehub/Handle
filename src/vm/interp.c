@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 8 October 2010 11:44:20 am 
+/* Automatically generated from Squeak on 8 October 2010 2:26:17 pm 
    by VMMaker 3.11.13
  */
 
@@ -10857,35 +10857,31 @@ register struct foo * foo = &fum;
 			/* bytecodePrimBitOr */
 			{
 				sqInt integerArgument;
-				sqInt rcvr;
-				sqInt arg;
 				sqInt integerReceiver;
-				sqInt top;
-				sqInt top1;
 				sqInt object;
 				sqInt sp;
+				sqInt top;
+				sqInt top1;
+				sqInt top2;
+				sqInt top11;
 				foo->successFlag = 1;
 				/* begin externalizeIPandSP */
 				foo->instructionPointer = oopForPointer(localIP);
 				foo->stackPointer = oopForPointer(localSP);
 				foo->theHomeContext = localHomeContext;
 				/* begin primitiveBitOr */
-				/* begin popStack */
-				top = longAt(foo->stackPointer);
-				foo->stackPointer -= BytesPerWord;
-				arg = top;
-				integerArgument = positive32BitValueOf(arg);
+				/* begin popPos32BitInteger */
 				/* begin popStack */
 				top1 = longAt(foo->stackPointer);
 				foo->stackPointer -= BytesPerWord;
-				rcvr = top1;
-				integerReceiver = positive32BitValueOf(rcvr);
-				printNum(integerReceiver);
-				/* begin cr */
-				printf("\n");
-				printNum(integerArgument);
-				/* begin cr */
-				printf("\n");
+				top = top1;
+				integerArgument = positive32BitValueOf(top);
+				/* begin popPos32BitInteger */
+				/* begin popStack */
+				top11 = longAt(foo->stackPointer);
+				foo->stackPointer -= BytesPerWord;
+				top2 = top11;
+				integerReceiver = positive32BitValueOf(top2);
 				if (foo->successFlag) {
 					/* begin push: */
 					object = positive32BitIntegerFor(integerReceiver | integerArgument);
@@ -14422,30 +14418,26 @@ register struct foo * foo = &fum;
 sqInt primitiveBitOr(void) {
 register struct foo * foo = &fum;
     sqInt integerArgument;
-    sqInt rcvr;
-    sqInt arg;
     sqInt integerReceiver;
-    sqInt top;
-    sqInt top1;
     sqInt object;
     sqInt sp;
+    sqInt top;
+    sqInt top1;
+    sqInt top2;
+    sqInt top11;
 
-	/* begin popStack */
-	top = longAt(foo->stackPointer);
-	foo->stackPointer -= BytesPerWord;
-	arg = top;
-	integerArgument = positive32BitValueOf(arg);
+	/* begin popPos32BitInteger */
 	/* begin popStack */
 	top1 = longAt(foo->stackPointer);
 	foo->stackPointer -= BytesPerWord;
-	rcvr = top1;
-	integerReceiver = positive32BitValueOf(rcvr);
-	printNum(integerReceiver);
-	/* begin cr */
-	printf("\n");
-	printNum(integerArgument);
-	/* begin cr */
-	printf("\n");
+	top = top1;
+	integerArgument = positive32BitValueOf(top);
+	/* begin popPos32BitInteger */
+	/* begin popStack */
+	top11 = longAt(foo->stackPointer);
+	foo->stackPointer -= BytesPerWord;
+	top2 = top11;
+	integerReceiver = positive32BitValueOf(top2);
 	if (foo->successFlag) {
 		/* begin push: */
 		object = positive32BitIntegerFor(integerReceiver | integerArgument);

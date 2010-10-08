@@ -1,134 +1,134 @@
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/ADPCMCodecPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/AsynchFilePlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/B2DPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/B3DAcceleratorPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/BitBltPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/DropPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/DSAPrims.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/FFTPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/FilePlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/FloatArrayPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/GeniePlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/InternetConfigPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/JoystickTabletPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/JPEGReaderPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/JPEGReadWriter2Plugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/Klatt.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/LargeIntegers.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/Matrix2x3Plugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/MIDIPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/MiscPrimitivePlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SecurityPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SerialPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SocketPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SoundCodecPrims.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SoundGenerationPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SoundPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/Squeak3D.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/StarSqueakPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/UUIDPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/ZipPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacInternetConfiguration.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacJoystickAndTablet.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacMIDI.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUUID.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacMemory.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacTime.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUIAppleEvents.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUIClipBoard.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqOpenGLRenderer.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqFilePluginBasicPrims.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/Error.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcapimin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcapistd.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jccoefct.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jccolor.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcdctmgr.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jchuff.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcinit.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcmainct.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcmarker.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcmaster.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcomapi.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcparam.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcphuff.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcprepct.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcsample.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jctrans.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdapimin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdapistd.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdatadst.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdatasrc.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdcoefct.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdcolor.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jddctmgr.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdhuff.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdinput.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdmainct.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdmarker.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdmaster.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdmerge.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdphuff.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdpostct.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdsample.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdtrans.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jerror.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jfdctflt.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jfdctfst.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jfdctint.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jidctflt.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jidctfst.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jidctint.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jidctred.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jmemdatadst.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jmemdatasrc.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jmemmgr.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jmemnobs.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jquant1.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jquant2.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jutils.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqSoundCodecPluginBasicPrims.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dAlloc.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dDraw.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dInit.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dMain.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dRemap.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SurfacePlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqNamedPrims.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqVirtualMachine.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/osExports.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/BMPReadWriterPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqUnixSocket.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/aio.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HostWindowPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacHostWindow.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/MacMenubarPlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUnixInterfaceSound.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqUnixSoundMacOSXJMM.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUnixCommandLineInterface.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HID_Error_Handler.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HID_Name_Lookup.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HID_Queue_Utilities.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HID_Utilities.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqUnixAsynchFile.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacImageIO.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacOpenGLInfo.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacSecurity.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUIMenuBarUniversal.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/chartables.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/get.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/pcre.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/study.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/RePlugin.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacNSPluginUILogic2.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/NSCursorWrappers.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/interp.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacOpenGL.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacDragDrop.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUnixFileInterface.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacEncoding.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUnixExternalPrims.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacMain.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacWindowUniversal.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUIEventsUniversal.o
-/Users/arnaudj/Desktop/Cool Topic/TM/compile/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqUnixSerial.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/ADPCMCodecPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/AsynchFilePlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/B2DPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/B3DAcceleratorPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/BitBltPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/DropPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/DSAPrims.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/FFTPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/FilePlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/FloatArrayPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/GeniePlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/InternetConfigPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/JoystickTabletPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/JPEGReaderPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/JPEGReadWriter2Plugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/Klatt.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/LargeIntegers.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/Matrix2x3Plugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/MIDIPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/MiscPrimitivePlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SecurityPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SerialPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SocketPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SoundCodecPrims.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SoundGenerationPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SoundPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/Squeak3D.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/StarSqueakPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/UUIDPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/ZipPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacInternetConfiguration.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacJoystickAndTablet.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacMIDI.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUUID.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacMemory.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacTime.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUIAppleEvents.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUIClipBoard.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqOpenGLRenderer.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqFilePluginBasicPrims.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/Error.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcapimin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcapistd.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jccoefct.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jccolor.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcdctmgr.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jchuff.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcinit.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcmainct.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcmarker.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcmaster.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcomapi.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcparam.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcphuff.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcprepct.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jcsample.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jctrans.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdapimin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdapistd.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdatadst.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdatasrc.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdcoefct.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdcolor.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jddctmgr.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdhuff.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdinput.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdmainct.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdmarker.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdmaster.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdmerge.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdphuff.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdpostct.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdsample.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jdtrans.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jerror.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jfdctflt.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jfdctfst.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jfdctint.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jidctflt.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jidctfst.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jidctint.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jidctred.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jmemdatadst.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jmemdatasrc.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jmemmgr.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jmemnobs.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jquant1.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jquant2.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/jutils.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqSoundCodecPluginBasicPrims.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dAlloc.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dDraw.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dInit.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dMain.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/b3dRemap.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/SurfacePlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqNamedPrims.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqVirtualMachine.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/osExports.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/BMPReadWriterPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqUnixSocket.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/aio.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HostWindowPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacHostWindow.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/MacMenubarPlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUnixInterfaceSound.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqUnixSoundMacOSXJMM.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUnixCommandLineInterface.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HID_Error_Handler.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HID_Name_Lookup.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HID_Queue_Utilities.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/HID_Utilities.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqUnixAsynchFile.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacImageIO.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacOpenGLInfo.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacSecurity.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUIMenuBarUniversal.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/chartables.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/get.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/pcre.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/study.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/RePlugin.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacNSPluginUILogic2.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/NSCursorWrappers.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/interp.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacOpenGL.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacDragDrop.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUnixFileInterface.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacEncoding.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUnixExternalPrims.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacMain.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacWindowUniversal.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqMacUIEventsUniversal.o
+/Users/arnaudj/Desktop/GIT/Handle/build/SqueakVMUNIXPATHS.build/Deployment/Squeak VM Universal.build/Objects-normal/ppc/sqUnixSerial.o

@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 23 September 2010 11:58:59 am 
+/* Automatically generated from Squeak on 8 October 2010 2:26:35 pm 
    by VMMaker 3.11.13
  */
 
@@ -62,9 +62,9 @@ extern
 struct VirtualMachine* interpreterProxy;
 static const char *moduleName =
 #ifdef SQUEAK_BUILTIN_PLUGIN
-	"MiscPrimitivePlugin 23 September 2010 (i)"
+	"MiscPrimitivePlugin 8 October 2010 (i)"
 #else
-	"MiscPrimitivePlugin 23 September 2010 (e)"
+	"MiscPrimitivePlugin 8 October 2010 (e)"
 #endif
 ;
 

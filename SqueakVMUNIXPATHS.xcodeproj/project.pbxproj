@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13CAFC12125F454500369F11 /* Handle.icns in Resources */ = {isa = PBXBuildFile; fileRef = 13CAFC11125F454500369F11 /* Handle.icns */; };
 		94002C4409EB18EF003C4BF2 /* sqMemoryAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 94002C4209EB18EF003C4BF2 /* sqMemoryAccess.h */; };
 		941729A10BE1206D00A1AD4A /* NSCursorWrappers.m in Sources */ = {isa = PBXBuildFile; fileRef = 941729A00BE1206D00A1AD4A /* NSCursorWrappers.m */; };
 		941729A30BE1207700A1AD4A /* NSCursorWrappers.h in Headers */ = {isa = PBXBuildFile; fileRef = 941729A20BE1207700A1AD4A /* NSCursorWrappers.h */; };
@@ -266,6 +267,7 @@
 		087740A300C6A47FC0A80109 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		087740A400C6A47FC0A80109 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		087740A700C6A4EDC0A80109 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		13CAFC11125F454500369F11 /* Handle.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Handle.icns; path = resources/ProjectBuilder/Handle.icns; sourceTree = "<group>"; };
 		661A41BF037EF3FE00A80109 /* BMPReadWriterPlugin.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = BMPReadWriterPlugin.c; sourceTree = "<group>"; };
 		664A73DC0300584000A80109 /* Squeak.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Squeak.icns; path = resources/ProjectBuilder/Squeak.icns; sourceTree = "<group>"; };
 		664A73DD0300584000A80109 /* SqueakChanges.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SqueakChanges.icns; path = resources/ProjectBuilder/SqueakChanges.icns; sourceTree = "<group>"; };
@@ -288,7 +290,7 @@
 		94196AAF09974200005962BF /* sqMacUIMenuBarUniversal.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = sqMacUIMenuBarUniversal.c; sourceTree = "<group>"; };
 		94196AB009974200005962BF /* sqMacWindowUniversal.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = sqMacWindowUniversal.c; sourceTree = "<group>"; };
 		941A3B2109AA135F00C9D25A /* Squeak VM Universal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Squeak VM Universal-Info.plist"; sourceTree = "<group>"; };
-		941A3C0C09AA144000C9D25A /* Squeak VM Opt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squeak VM Opt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		941A3C0C09AA144000C9D25A /* Handle VM 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handle VM 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9426FF0F09F489D200ECEDDC /* chartables.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = chartables.c; sourceTree = "<group>"; };
 		9426FF1009F489D200ECEDDC /* config.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		9426FF1109F489D200ECEDDC /* get.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = get.c; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 		08773F0500C6A1C4C0A80109 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				13CAFC11125F454500369F11 /* Handle.icns */,
 				664A73DC0300584000A80109 /* Squeak.icns */,
 				664A73DD0300584000A80109 /* SqueakChanges.icns */,
 				664A73DE0300584000A80109 /* SqueakImage.icns */,
@@ -556,7 +559,7 @@
 		08773F3000C6A1C4C0A80109 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				941A3C0C09AA144000C9D25A /* Squeak VM Opt.app */,
+				941A3C0C09AA144000C9D25A /* Handle VM 1.0.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1550,7 +1553,7 @@
 			name = "Squeak VM Universal";
 			productInstallPath = "$(USER_APPS_DIR)";
 			productName = "Squeak VM OPT";
-			productReference = 941A3C0C09AA144000C9D25A /* Squeak VM Opt.app */;
+			productReference = 941A3C0C09AA144000C9D25A /* Handle VM 1.0.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1584,6 +1587,7 @@
 				941A3B7709AA144000C9D25A /* SqueakGeneric.icns in Resources */,
 				941A3B7809AA144000C9D25A /* SqueakProject.icns in Resources */,
 				941A3B7909AA144000C9D25A /* SqueakSources.icns in Resources */,
+				13CAFC12125F454500369F11 /* Handle.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1788,7 +1792,7 @@
 				OTHER_REZFLAGS = "";
 				PER_ARCH_CFLAGS_i386 = "-DLSB_FIRST -mtune=prescott -march=pentium-m  -mfpmath=sse  -DUSE_INLINE_MEMORY_ACCESSORS";
 				PER_ARCH_CFLAGS_ppc = "-D_BSD_SOCKLEN_T_=int";
-				PRODUCT_NAME = "Squeak VM Opt";
+				PRODUCT_NAME = "Handle VM 1.0";
 				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk/;
 				WARNING_CFLAGS = "";
 				WRAPPER_EXTENSION = app;
@@ -1829,7 +1833,7 @@
 				OTHER_REZFLAGS = "";
 				PER_ARCH_CFLAGS_i386 = "-O3  -DLSB_FIRST -falign-functions=16 -fno-gcse -mtune=prescott -march=pentium-m  -fomit-frame-pointer  -mfpmath=sse -finline-functions -Wall -DUSE_INLINE_MEMORY_ACCESSORS";
 				PER_ARCH_CFLAGS_ppc = "-fast -mtune=7450 -mcpu=7450 -D_BSD_SOCKLEN_T_=int";
-				PRODUCT_NAME = "Squeak VM Opt";
+				PRODUCT_NAME = "Handle VM 1.0";
 				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk/;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = "";

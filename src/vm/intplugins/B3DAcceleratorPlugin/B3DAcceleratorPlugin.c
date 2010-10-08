@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 23 September 2010 11:58:47 am 
+/* Automatically generated from Squeak on 8 October 2010 2:26:21 pm 
    by VMMaker 3.11.13
  */
 
@@ -96,9 +96,9 @@ extern
 struct VirtualMachine* interpreterProxy;
 static const char *moduleName =
 #ifdef SQUEAK_BUILTIN_PLUGIN
-	"B3DAcceleratorPlugin 23 September 2010 (i)"
+	"B3DAcceleratorPlugin 8 October 2010 (i)"
 #else
-	"B3DAcceleratorPlugin 23 September 2010 (e)"
+	"B3DAcceleratorPlugin 8 October 2010 (e)"
 #endif
 ;
 
