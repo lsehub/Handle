@@ -87,25 +87,18 @@
 			PBXWorkspaceStateSaveDate = 308229419;
 		};
 		perUserProjectItems = {
-			1344250E124B5F0700EF681B = 1344250E124B5F0700EF681B /* PBXTextBookmark */;
-			134586CD125A27F500BF393E = 134586CD125A27F500BF393E /* PBXTextBookmark */;
-			135807B111B0102B000B61BE = 135807B111B0102B000B61BE /* PBXTextBookmark */;
-			1364F855125F2722009C8A01 = 1364F855125F2722009C8A01 /* PBXTextBookmark */;
-			13651C0E125E1EC100069B32 = 13651C0E125E1EC100069B32 /* PBXTextBookmark */;
-			13893FE2125F2354002C7E52 = 13893FE2125F2354002C7E52 /* PBXTextBookmark */;
-			13CAFA3F125F354300369F11 /* PBXBookmark */ = 13CAFA3F125F354300369F11 /* PBXBookmark */;
+			1344250E124B5F0700EF681B /* PBXTextBookmark */ = 1344250E124B5F0700EF681B /* PBXTextBookmark */;
+			134586CD125A27F500BF393E /* PBXTextBookmark */ = 134586CD125A27F500BF393E /* PBXTextBookmark */;
+			135807B111B0102B000B61BE /* PBXTextBookmark */ = 135807B111B0102B000B61BE /* PBXTextBookmark */;
 			13CAFA44125F360B00369F11 /* PBXTextBookmark */ = 13CAFA44125F360B00369F11 /* PBXTextBookmark */;
-			13CAFA45125F360B00369F11 /* PlistBookmark */ = 13CAFA45125F360B00369F11 /* PlistBookmark */;
-			13CAFA46125F360B00369F11 /* PlistBookmark */ = 13CAFA46125F360B00369F11 /* PlistBookmark */;
-			13CAFA4B125F360B00369F11 /* PlistBookmark */ = 13CAFA4B125F360B00369F11 /* PlistBookmark */;
 			13CAFC1A125F463100369F11 /* PlistBookmark */ = 13CAFC1A125F463100369F11 /* PlistBookmark */;
 			13CAFC1B125F463100369F11 /* PBXBookmark */ = 13CAFC1B125F463100369F11 /* PBXBookmark */;
 			13CAFC1C125F463100369F11 /* PBXBookmark */ = 13CAFC1C125F463100369F11 /* PBXBookmark */;
 			13CAFC1D125F463100369F11 /* PBXBookmark */ = 13CAFC1D125F463100369F11 /* PBXBookmark */;
-			13CAFC1E125F463100369F11 /* PBXBookmark */ = 13CAFC1E125F463100369F11 /* PBXBookmark */;
-			13D6813011DA7197001F1CD2 = 13D6813011DA7197001F1CD2 /* PBXTextBookmark */;
-			13D6813111DA7197001F1CD2 = 13D6813111DA7197001F1CD2 /* PBXTextBookmark */;
-			13E4A7F3113D58F8005A995C = 13E4A7F3113D58F8005A995C /* PBXTextBookmark */;
+			13CAFC28125F765E00369F11 /* PBXBookmark */ = 13CAFC28125F765E00369F11 /* PBXBookmark */;
+			13D6813011DA7197001F1CD2 /* PBXTextBookmark */ = 13D6813011DA7197001F1CD2 /* PBXTextBookmark */;
+			13D6813111DA7197001F1CD2 /* PBXTextBookmark */ = 13D6813111DA7197001F1CD2 /* PBXTextBookmark */;
+			13E4A7F3113D58F8005A995C /* PBXTextBookmark */ = 13E4A7F3113D58F8005A995C /* PBXTextBookmark */;
 		};
 		sourceControlManager = 13082439113C0D9900B653BC /* Source Control */;
 		userBuildSettings = {
@@ -187,40 +180,6 @@
 		vrLen = 719;
 		vrLoc = 0;
 	};
-	1364F855125F2722009C8A01 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 94A9A6B80BFB708400A439DD /* interp.c */;
-		name = "interp.c: 25755";
-		rLen = 0;
-		rLoc = 831946;
-		rType = 0;
-		vrLen = 760;
-		vrLoc = 69154;
-	};
-	13651C0E125E1EC100069B32 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 94A9A6B80BFB708400A439DD /* interp.c */;
-		name = "interp.c: 25747";
-		rLen = 0;
-		rLoc = 831801;
-		rType = 0;
-		vrLen = 840;
-		vrLoc = 69433;
-	};
-	13893FE2125F2354002C7E52 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 94A9A6B80BFB708400A439DD /* interp.c */;
-		name = "interp.c: 25755";
-		rLen = 0;
-		rLoc = 831946;
-		rType = 0;
-		vrLen = 800;
-		vrLoc = 69114;
-	};
-	13CAFA3F125F354300369F11 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 941A3B2109AA135F00C9D25A /* Squeak VM Universal-Info.plist */;
-	};
 	13CAFA44125F360B00369F11 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 94A9A6B80BFB708400A439DD /* interp.c */;
@@ -230,40 +189,6 @@
 		rType = 0;
 		vrLen = 720;
 		vrLoc = 69153;
-	};
-	13CAFA45125F360B00369F11 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 941A3B2109AA135F00C9D25A /* Squeak VM Universal-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/arnaudj/Desktop/GIT/Handle/Squeak VM Universal-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	13CAFA46125F360B00369F11 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 941A3B2109AA135F00C9D25A /* Squeak VM Universal-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CFBundleGetInfoString,
-		);
-		name = "/Users/arnaudj/Desktop/GIT/Handle/Squeak VM Universal-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	13CAFA4B125F360B00369F11 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 941A3B2109AA135F00C9D25A /* Squeak VM Universal-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/arnaudj/Desktop/GIT/Handle/Squeak VM Universal-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
 	};
 	13CAFC1A125F463100369F11 /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -289,7 +214,7 @@
 		isa = PBXBookmark;
 		fRef = 13CAFC11125F454500369F11 /* Handle.icns */;
 	};
-	13CAFC1E125F463100369F11 /* PBXBookmark */ = {
+	13CAFC28125F765E00369F11 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 13CAFC11125F454500369F11 /* Handle.icns */;
 	};

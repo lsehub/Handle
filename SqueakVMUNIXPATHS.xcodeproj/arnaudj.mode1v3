@@ -278,7 +278,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>74</integer>
 									<integer>73</integer>
 								</array>
 							</array>
@@ -330,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>13CAFC1E125F463100369F11</string>
+										<string>13CAFC28125F765E00369F11</string>
 										<key>history</key>
 										<array>
 											<string>13E4A7F3113D58F8005A995C</string>
@@ -543,13 +542,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>13CAFC1F125F463100369F11</string>
 		<string>13CAFA55125F360B00369F11</string>
 		<string>13CAFA56125F360B00369F11</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>13E4A7D3113D4E10005A995C</string>
-		<string>/Users/arnaudj/Desktop/GIT/Handle/SqueakVMUNIXPATHS.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>1701 53 1231 745 1680 0 1280 800 </string>
@@ -644,7 +641,7 @@
 			<key>WindowToolGUID</key>
 			<string>13E4A7D3113D4E10005A995C</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
