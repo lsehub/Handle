@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 8 October 2010 2:26:17 pm 
+/* Automatically generated from Squeak on 14 October 2010 4:32:18 pm 
    by VMMaker 3.11.13
  */
 
@@ -137,7 +137,7 @@ void error(char *s) {
 #define MarkBit 2147483648U
 #define MaxExternalPrimitiveTableSize 4096
 #define MaxJumpBuf 32
-#define MaxPrimitiveIndex 576
+#define MaxPrimitiveIndex 578
 #define MessageArgumentsIndex 1
 #define MessageDictionaryIndex 1
 #define MessageLookupClassIndex 2
@@ -513,6 +513,10 @@ sqInt primitiveGetAttribute(void);
 sqInt primitiveGetNextEvent(void);
 sqInt primitiveGreaterOrEqual(void);
 sqInt primitiveGreaterThan(void);
+#pragma export on
+EXPORT(sqInt) primitiveHandleAddInstVar(void);
+EXPORT(sqInt) primitiveHandleClass(void);
+#pragma export off
 sqInt primitiveImageName(void);
 sqInt primitiveIncrementalGC(void);
 sqInt primitiveIndexOf(sqInt methodPointer);
@@ -1392,6 +1396,8 @@ char* obsoleteIndexedPrimitiveTable[][3] = {
 { NULL, NULL, NULL },
 { NULL, NULL, NULL },
 { NULL, NULL, NULL },
+{ NULL, NULL, NULL },
+{ NULL, NULL, NULL },
 { NULL, NULL, NULL }
 };
 sqInt imageFormatVersionNumber = 6502;
@@ -1469,7 +1475,7 @@ const char* obsoleteNamedPrimitiveTable[][3] = {
 { NULL, NULL, NULL }
 };
 struct VirtualMachine* interpreterProxy;
-void *primitiveTable[578] = {
+void *primitiveTable[580] = {
 	/* 0*/ (void *)primitiveFail,
 	/* 1*/ (void *)primitiveAdd,
 	/* 2*/ (void *)primitiveSubtract,
@@ -2046,7 +2052,9 @@ void *primitiveTable[578] = {
 	/* 573*/ (void *)primitiveListExternalModule,
 	/* 574*/ (void *)primitiveFail,
 	/* 575*/ (void *)primitiveAsHandle,
-	/* 576*/ (void *)primitiveFail,
+	/* 576*/ (void *)primitiveHandleClass,
+	/* 577*/ (void *)primitiveHandleAddInstVar,
+	/* 578*/ (void *)primitiveFail,
  0 };
 usqInt memory;
 void* showSurfaceFn;
@@ -17138,6 +17146,47 @@ l2:	/* end checkedIntegerValueOf: */;
 	}
 }
 
+EXPORT(sqInt) primitiveHandleAddInstVar(void) {
+register struct foo * foo = &fum;
+    sqInt rcvr;
+    sqInt each;
+    sqInt sizeOfNewArray;
+    sqInt array;
+    sqInt instanVarName;
+    sqInt newArray;
+    sqInt sp;
+    sqInt sp1;
+
+	instanVarName = longAt(foo->stackPointer);
+	rcvr = longAt(foo->stackPointer - (1 * BytesPerWord));
+	array = longAt((rcvr + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+	sizeOfNewArray = stSizeOf(array);
+	/* begin push: */
+	longAtput(sp = foo->stackPointer + BytesPerWord, longAt((foo->specialObjectsOop + BaseHeaderSize) + (ClassArray << ShiftForWord)));
+	foo->stackPointer = sp;
+	/* begin push: */
+	longAtput(sp1 = foo->stackPointer + BytesPerWord, sizeOfNewArray);
+	foo->stackPointer = sp1;
+	primitiveNewWithArg();
+	/* begin pop: */
+	foo->stackPointer -= 1 * BytesPerWord;
+	for (each = 1; each <= sizeOfNewArray; each += 1) {
+		stObjectatput(newArray, each, stObjectat(array, each));
+	}
+	longAt((rcvr + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+}
+
+EXPORT(sqInt) primitiveHandleClass(void) {
+register struct foo * foo = &fum;
+    sqInt instance;
+    sqInt sp;
+
+	instance = longAt(foo->stackPointer);
+	/* begin pop:thenPush: */
+	longAtput(sp = foo->stackPointer - (((foo->argumentCount + 1) - 1) * BytesPerWord), longAt((instance + BaseHeaderSize) + (HandleClassLookupIndex << ShiftForWord)));
+	foo->stackPointer = sp;
+}
+
 
 /*	When called with a single string argument, record the string as the current image file name. When called with zero arguments, return a string containing the current image file name. */
 
@@ -25721,25 +25770,27 @@ void* vm_exports[][3] = {
 	{"", "dumpImage", (void*)dumpImage},
 	{"", "addGCRoot", (void*)addGCRoot},
 	{"", "callbackLeave", (void*)callbackLeave},
+	{"", "callbackEnter", (void*)callbackEnter},
 	{"", "primitiveIsRoot", (void*)primitiveIsRoot},
 	{"", "primitiveRootTableAt", (void*)primitiveRootTableAt},
-	{"", "callbackEnter", (void*)callbackEnter},
-	{"", "primitiveIsYoung", (void*)primitiveIsYoung},
-	{"", "callInterpreter", (void*)callInterpreter},
 	{"", "primitiveChangeClassWithClass", (void*)primitiveChangeClassWithClass},
+	{"", "primitiveIsYoung", (void*)primitiveIsYoung},
 	{"", "internalIsMutable", (void*)internalIsMutable},
+	{"", "callInterpreter", (void*)callInterpreter},
 	{"", "internalIsImmutable", (void*)internalIsImmutable},
 	{"", "primitiveAsHandle", (void*)primitiveAsHandle},
 	{"", "sendInvokeCallbackStackRegistersJmpbuf", (void*)sendInvokeCallbackStackRegistersJmpbuf},
 	{"", "primitiveSetGCSemaphore", (void*)primitiveSetGCSemaphore},
 	{"", "moduleUnloaded", (void*)moduleUnloaded},
 	{"", "primitiveDisablePowerManager", (void*)primitiveDisablePowerManager},
-	{"", "primitiveForceTenure", (void*)primitiveForceTenure},
 	{"", "primitiveScreenDepth", (void*)primitiveScreenDepth},
+	{"", "primitiveForceTenure", (void*)primitiveForceTenure},
+	{"", "primitiveHandleClass", (void*)primitiveHandleClass},
+	{"", "primitiveHandleAddInstVar", (void*)primitiveHandleAddInstVar},
 	{"", "removeGCRoot", (void*)removeGCRoot},
 	{"", "getStackPointer", (void*)getStackPointer},
-	{"", "primitiveSetGCBiasToGrowGCLimit", (void*)primitiveSetGCBiasToGrowGCLimit},
 	{"", "primitiveRootTable", (void*)primitiveRootTable},
+	{"", "primitiveSetGCBiasToGrowGCLimit", (void*)primitiveSetGCBiasToGrowGCLimit},
 	{"", "primitiveSetGCBiasToGrow", (void*)primitiveSetGCBiasToGrow},
 	{"", "reestablishContextPriorToCallback", (void*)reestablishContextPriorToCallback},
 	{NULL, NULL, NULL}
