@@ -1,0 +1,4162 @@
+THERE_BE_DRAGONS_HERE
+Warning
+8 October 2010 1:16:01 pm
+
+VM: Mac OS - intel - 1064 - Squeak4.1 of 17 April 2010 [latest update: #9957] Squeak VM 4.2.5b1
+Image: PharoCore1.1ALPHA [Latest update: #11239]
+
+SecurityManager state:
+Restricted: false
+FileAccess: true
+SocketAccess: true
+Working Dir /Users/arnaudj/Desktop/GIT/Handle/VM
+Trusted Dir /foobar/tooBar/forSqueak/bogus
+Untrusted Dir /Users/arnaudj/Library/Preferences/Squeak/Internet/My Squeak
+
+Deprecation(Warning)>>defaultAction
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+Deprecation>>defaultAction
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+		log: 	nil
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+UndefinedObject>>handleSignal:
+	Receiver: nil
+	Arguments and temporary variables: 
+		exception: 	Deprecation: The method Object initialExtent has been deprecated.
+Do...etc...
+	Receiver's instance variables: 
+nil
+
+MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Deprecation: The method Object initialExtent has been deprecated.
+Do...etc...
+		val: 	nil
+	Receiver's instance variables: 
+		sender: 	PasteUpMorph>>becomeActiveDuring:
+		pc: 	17
+		stackp: 	3
+		method: 	(BlockClosure>>#on:do: "a CompiledMethod(1699)")
+		closureOrNil: 	nil
+		receiver: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+
+
+Deprecation(Exception)>>signal
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+DiffMorph(Object)>>deprecated:on:in:
+	Receiver: a DiffMorph(1198)
+	Arguments and temporary variables: 
+		anExplanationString: 	'Do not use this method. It will disappear soon'
+		date: 	'20 February 2010'
+		version: 	'Pharo1.1'
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a PanelMorph(2464) a DiffMapMorph(3669) a ScrollBar(3396) a...etc...
+		fullBounds: 	nil
+		color: 	Color white
+		extension: 	a MorphExtension (2516) [other:  (myDependents -> a DependentsArray(...etc...
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		srcText: 	nil
+		dstText: 	nil
+		prettyPrint: 	false
+		contextClass: 	nil
+		srcMorph: 	a PluggableTextEditorMorph(834)
+		dstMorph: 	a PluggableTextEditorMorph(109)
+		scrollbarMorph: 	a ScrollBar(3396)
+		mapMorph: 	a DiffMapMorph(3669)
+		joinMorph: 	a DiffJoinMorph(224)
+		difference: 	nil
+		joinMappings: 	nil
+
+
+DiffMorph(Object)>>initialExtent
+	Receiver: a DiffMorph(1198)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a PanelMorph(2464) a DiffMapMorph(3669) a ScrollBar(3396) a...etc...
+		fullBounds: 	nil
+		color: 	Color white
+		extension: 	a MorphExtension (2516) [other:  (myDependents -> a DependentsArray(...etc...
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		srcText: 	nil
+		dstText: 	nil
+		prettyPrint: 	false
+		contextClass: 	nil
+		srcMorph: 	a PluggableTextEditorMorph(834)
+		dstMorph: 	a PluggableTextEditorMorph(109)
+		scrollbarMorph: 	a ScrollBar(3396)
+		mapMorph: 	a DiffMapMorph(3669)
+		joinMorph: 	a DiffJoinMorph(224)
+		difference: 	nil
+		joinMappings: 	nil
+
+
+DiffMorph(Morph)>>initialExtent
+	Receiver: a DiffMorph(1198)
+	Arguments and temporary variables: 
+		ext: 	nil
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a PanelMorph(2464) a DiffMapMorph(3669) a ScrollBar(3396) a...etc...
+		fullBounds: 	nil
+		color: 	Color white
+		extension: 	a MorphExtension (2516) [other:  (myDependents -> a DependentsArray(...etc...
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		srcText: 	nil
+		dstText: 	nil
+		prettyPrint: 	false
+		contextClass: 	nil
+		srcMorph: 	a PluggableTextEditorMorph(834)
+		dstMorph: 	a PluggableTextEditorMorph(109)
+		scrollbarMorph: 	a ScrollBar(3396)
+		mapMorph: 	a DiffMapMorph(3669)
+		joinMorph: 	a DiffJoinMorph(224)
+		difference: 	nil
+		joinMappings: 	nil
+
+
+DiffMorph>>initialize
+	Receiver: a DiffMorph(1198)
+	Arguments and temporary variables: 
+		exv: 	a ValueHolder
+		exh: 	a ValueHolder
+		opts: 	a PanelMorph(2464)
+		ppCheckbox: 	a CheckboxMorph(3948)
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a PanelMorph(2464) a DiffMapMorph(3669) a ScrollBar(3396) a...etc...
+		fullBounds: 	nil
+		color: 	Color white
+		extension: 	a MorphExtension (2516) [other:  (myDependents -> a DependentsArray(...etc...
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		srcText: 	nil
+		dstText: 	nil
+		prettyPrint: 	false
+		contextClass: 	nil
+		srcMorph: 	a PluggableTextEditorMorph(834)
+		dstMorph: 	a PluggableTextEditorMorph(109)
+		scrollbarMorph: 	a ScrollBar(3396)
+		mapMorph: 	a DiffMapMorph(3669)
+		joinMorph: 	a DiffJoinMorph(224)
+		difference: 	nil
+		joinMappings: 	nil
+
+
+DiffMorph class(Behavior)>>new
+	Receiver: DiffMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	ComposableMorph
+		methodDict: 	a MethodDictionary(#additionColor->(DiffMorph>>#additionColor "a Co...etc...
+		format: 	174
+		instanceVariables: 	#('srcText' 'dstText' 'prettyPrint' 'contextClass' 'srcMorph...etc...
+		organization: 	('accessing' contextClass contextClass: difference difference: ds...etc...
+		subclasses: 	{MergeDiffMorph}
+		name: 	#DiffMorph
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	nil
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+DiffMorph class(MorphicModel class)>>new
+	Receiver: DiffMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	ComposableMorph
+		methodDict: 	a MethodDictionary(#additionColor->(DiffMorph>>#additionColor "a Co...etc...
+		format: 	174
+		instanceVariables: 	#('srcText' 'dstText' 'prettyPrint' 'contextClass' 'srcMorph...etc...
+		organization: 	('accessing' contextClass contextClass: difference difference: ds...etc...
+		subclasses: 	{MergeDiffMorph}
+		name: 	#DiffMorph
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	nil
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+PSMCPatchMorph(DiffChangeMorph)>>newDiffMorph
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	nil
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	nil
+		descriptionMorph: 	nil
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph(DiffChangeMorph)>>initialize
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+		descriptionHeight: 	nil
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	nil
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	nil
+		descriptionMorph: 	nil
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph>>initialize
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+		descriptionHeight: 	nil
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	#()
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	nil
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	nil
+		descriptionMorph: 	nil
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph class(Behavior)>>new
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+PSMCPatchMorph class(MorphicModel class)>>new
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+PSMCPatchMorph class>>forPatch:
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+		aPatch: 	a MCPatch
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+MCFileRepositoryInspector(MCVersionInspector)>>viewChanges:from:to:
+	Receiver: a MCFileRepositoryInspector
+	Arguments and temporary variables: 
+		patch: 	a MCPatch
+		fromDescription: 	'Capabilities-Handle-VM (Capabilities-Handle-VM-jb.6)'
+		toDescription: 	'Capabilities-Handle-VM-jb.3'
+		title: 	'Changes from Capabilities-Handle-VM (Capabilities-Handle-VM-jb.6) to Ca...etc...
+	Receiver's instance variables: 
+		morph: 	nil
+		label: 	nil
+		modal: 	false
+		modalValue: 	nil
+		version: 	a MCVersion(Capabilities-Handle-VM-jb.3)
+		repository: 	a MCHttpRepository(http://www.squeaksource.com/Handle)
+		versions: 	#(#('Capabilities-Handle-VM' 'jb' 6 'Capabilities-Handle-VM-jb.6.mcz'...etc...
+		loaded: 	a Set('SUnitGUI-StephaneDucasse.56' 'Collections-Weak-StephaneDucasse.2...etc...
+		newer: 	a Set()
+		inherited: 	a Set('Monticello-al.306' 'FixUnderscores-bf.5' 'Metacello-Core-dkh....etc...
+		packageList: 	an Array(a Text for 'Alien-VMMaker-Support' a Text for 'Capabiliti...etc...
+		selectedPackage: 	'Capabilities-Handle-VM'
+		selectedVersion: 	'Capabilities-Handle-VM-jb.3.mcz'
+		order: 	5
+		versionInfo: 	nil
+
+
+MCFileRepositoryInspector(MCVersionInspector)>>changes
+	Receiver: a MCFileRepositoryInspector
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		morph: 	nil
+		label: 	nil
+		modal: 	false
+		modalValue: 	nil
+		version: 	a MCVersion(Capabilities-Handle-VM-jb.3)
+		repository: 	a MCHttpRepository(http://www.squeaksource.com/Handle)
+		versions: 	#(#('Capabilities-Handle-VM' 'jb' 6 'Capabilities-Handle-VM-jb.6.mcz'...etc...
+		loaded: 	a Set('SUnitGUI-StephaneDucasse.56' 'Collections-Weak-StephaneDucasse.2...etc...
+		newer: 	a Set()
+		inherited: 	a Set('Monticello-al.306' 'FixUnderscores-bf.5' 'Metacello-Core-dkh....etc...
+		packageList: 	an Array(a Text for 'Alien-VMMaker-Support' a Text for 'Capabiliti...etc...
+		selectedPackage: 	'Capabilities-Handle-VM'
+		selectedVersion: 	'Capabilities-Handle-VM-jb.3.mcz'
+		order: 	5
+		versionInfo: 	nil
+
+
+PluggableButtonMorphPlus(PluggableButtonMorph)>>performAction
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus>>performAction
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+[] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	a PluggableButtonMorphPlus(261)
+		m: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a PluggableButtonM...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+		index: 	4
+		indexLimiT: 	9
+	Receiver's instance variables: 
+an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a PluggableButtonM...etc...
+
+PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+		all: 	an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a ...etc...
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus(Morph)>>handleMouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [380@50 mouseUp 301696 nil]
+	Arguments and temporary variables: 
+		anObject: 	a PluggableButtonMorphPlus(261)
+	Receiver's instance variables: 
+		timeStamp: 	301696
+		source: 	a HandMorph(3216)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	380@50
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+PluggableButtonMorphPlus(Morph)>>handleEvent:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus(Morph)>>handleFocusEvent:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+[] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	380@50 corner: 396@66
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	380@50 corner: 396@66
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[380@50 mouseUp 301696 nil]
+		targetOffset: 	26@20
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 301696 380 50 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+[] in PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1627@998
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PluggableStandardWindow(3976) a Syst...etc...
+		fullBounds: 	0@0 corner: 1627@998
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+BlockClosure>>on:do:
+	Receiver: [closure] in PasteUpMorph>>becomeActiveDuring:
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+		handlerActive: 	true
+	Receiver's instance variables: 
+		outerContext: 	PasteUpMorph>>becomeActiveDuring:
+		startpc: 	67
+		numArgs: 	0
+
+
+PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in HandMorph>>sendFocusEvent:to:clear:
+		priorWorld: 	a PasteUpMorph(1622) [world]
+		priorHand: 	a HandMorph(3216)
+		priorEvent: 	[380@50 mouseOver red nil nil]
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1627@998
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PluggableStandardWindow(3976) a Syst...etc...
+		fullBounds: 	0@0 corner: 1627@998
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		aBlock: 	[closure] in HandMorph>>sendMouseEvent:
+		w: 	a PasteUpMorph(1622) [world]
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	380@50 corner: 396@66
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	380@50 corner: 396@66
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[380@50 mouseUp 301696 nil]
+		targetOffset: 	26@20
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 301696 380 50 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		aBlock: 	[closure] in HandMorph>>sendMouseEvent:
+		result: 	nil
+	Receiver's instance variables: 
+		bounds: 	380@50 corner: 396@66
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	380@50 corner: 396@66
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[380@50 mouseUp 301696 nil]
+		targetOffset: 	26@20
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 301696 380 50 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	380@50 corner: 396@66
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	380@50 corner: 396@66
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[380@50 mouseUp 301696 nil]
+		targetOffset: 	26@20
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 301696 380 50 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>handleEvent:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		evt: 	[380@50 mouseUp 301696 nil]
+		ofs: 	nil
+	Receiver's instance variables: 
+		bounds: 	380@50 corner: 396@66
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	380@50 corner: 396@66
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[380@50 mouseUp 301696 nil]
+		targetOffset: 	26@20
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 301696 380 50 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>processEvents
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+		evtBuf: 	#(1 301696 380 50 0 0 0 1)
+		type: 	1
+		hadAny: 	false
+	Receiver's instance variables: 
+		bounds: 	380@50 corner: 396@66
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	380@50 corner: 396@66
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[380@50 mouseUp 301696 nil]
+		targetOffset: 	26@20
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 301696 380 50 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+[] in WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		h: 	a HandMorph(3216)
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(3216))
+		viewBox: 	0@0 corner: 1627@998
+		canvas: 	a FormCanvas on: DisplayScreen(1627x998x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> an OverflowRowMorph(3518))(an Overflow...etc...
+		lastStepTime: 	301678
+		lastStepMessage: 	nil
+		lastCycleTime: 	301698
+		commandHistory: 	a CommandHistory
+		alarms: 	a Heap()
+		lastAlarmTime: 	301678
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+
+--- The full stack ---
+Deprecation(Warning)>>defaultAction
+Deprecation>>defaultAction
+UndefinedObject>>handleSignal:
+MethodContext(ContextPart)>>handleSignal:
+Deprecation(Exception)>>signal
+DiffMorph(Object)>>deprecated:on:in:
+DiffMorph(Object)>>initialExtent
+DiffMorph(Morph)>>initialExtent
+DiffMorph>>initialize
+DiffMorph class(Behavior)>>new
+DiffMorph class(MorphicModel class)>>new
+PSMCPatchMorph(DiffChangeMorph)>>newDiffMorph
+PSMCPatchMorph(DiffChangeMorph)>>initialize
+PSMCPatchMorph>>initialize
+PSMCPatchMorph class(Behavior)>>new
+PSMCPatchMorph class(MorphicModel class)>>new
+PSMCPatchMorph class>>forPatch:
+MCFileRepositoryInspector(MCVersionInspector)>>viewChanges:from:to:
+MCFileRepositoryInspector(MCVersionInspector)>>changes
+PluggableButtonMorphPlus(PluggableButtonMorph)>>performAction
+PluggableButtonMorphPlus>>performAction
+[] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+Array(SequenceableCollection)>>do:
+PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+PluggableButtonMorphPlus>>mouseUp:
+PluggableButtonMorphPlus(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+PluggableButtonMorphPlus(Morph)>>handleEvent:
+PluggableButtonMorphPlus(Morph)>>handleFocusEvent:
+[] in HandMorph>>sendFocusEvent:to:clear:
+[] in PasteUpMorph>>becomeActiveDuring:
+BlockClosure>>on:do:
+PasteUpMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[] in WorldState>>doOneCycleNowFor:
+ - - - - - - - - - - - - - - -  
+			- - - - - - - - - - - - - - - - - -
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+PasteUpMorph>>doOneCycle
+[] in Project class>>spawnNewProcess
+[] in BlockClosure>>newProcess
+------------------------------------------------------------
+
+THERE_BE_DRAGONS_HERE
+Warning
+8 October 2010 1:16:08 pm
+
+VM: Mac OS - intel - 1064 - Squeak4.1 of 17 April 2010 [latest update: #9957] Squeak VM 4.2.5b1
+Image: PharoCore1.1ALPHA [Latest update: #11239]
+
+SecurityManager state:
+Restricted: false
+FileAccess: true
+SocketAccess: true
+Working Dir /Users/arnaudj/Desktop/GIT/Handle/VM
+Trusted Dir /foobar/tooBar/forSqueak/bogus
+Untrusted Dir /Users/arnaudj/Library/Preferences/Squeak/Internet/My Squeak
+
+Deprecation(Warning)>>defaultAction
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+Deprecation>>defaultAction
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+		log: 	nil
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+UndefinedObject>>handleSignal:
+	Receiver: nil
+	Arguments and temporary variables: 
+		exception: 	Deprecation: The method Object initialExtent has been deprecated.
+Do...etc...
+	Receiver's instance variables: 
+nil
+
+MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Deprecation: The method Object initialExtent has been deprecated.
+Do...etc...
+		val: 	nil
+	Receiver's instance variables: 
+		sender: 	PasteUpMorph>>becomeActiveDuring:
+		pc: 	17
+		stackp: 	3
+		method: 	(BlockClosure>>#on:do: "a CompiledMethod(1699)")
+		closureOrNil: 	nil
+		receiver: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+
+
+Deprecation(Exception)>>signal
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+PSMCPatchMorph(Object)>>deprecated:on:in:
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+		anExplanationString: 	'Do not use this method. It will disappear soon'
+		date: 	'20 February 2010'
+		version: 	'Pharo1.1'
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a DiffMorph(1198) a PanelMorph(3857))
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (3075)
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	a DiffMorph(1198)
+		descriptionMorph: 	a PanelMorph(3857)
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph(Object)>>initialExtent
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a DiffMorph(1198) a PanelMorph(3857))
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (3075)
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	a DiffMorph(1198)
+		descriptionMorph: 	a PanelMorph(3857)
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph(Morph)>>initialExtent
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+		ext: 	nil
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a DiffMorph(1198) a PanelMorph(3857))
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (3075)
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	a DiffMorph(1198)
+		descriptionMorph: 	a PanelMorph(3857)
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph(DiffChangeMorph)>>initialize
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+		descriptionHeight: 	36
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a DiffMorph(1198) a PanelMorph(3857))
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (3075)
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	a DiffMorph(1198)
+		descriptionMorph: 	a PanelMorph(3857)
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph>>initialize
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+		descriptionHeight: 	nil
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a DiffMorph(1198) a PanelMorph(3857))
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (3075)
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	a DiffMorph(1198)
+		descriptionMorph: 	a PanelMorph(3857)
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph class(Behavior)>>new
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+PSMCPatchMorph class(MorphicModel class)>>new
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+PSMCPatchMorph class>>forPatch:
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+		aPatch: 	a MCPatch
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+MCFileRepositoryInspector(MCVersionInspector)>>viewChanges:from:to:
+	Receiver: a MCFileRepositoryInspector
+	Arguments and temporary variables: 
+		patch: 	a MCPatch
+		fromDescription: 	'Capabilities-Handle-VM (Capabilities-Handle-VM-jb.6)'
+		toDescription: 	'Capabilities-Handle-VM-jb.3'
+		title: 	'Changes from Capabilities-Handle-VM (Capabilities-Handle-VM-jb.6) to Ca...etc...
+	Receiver's instance variables: 
+		morph: 	nil
+		label: 	nil
+		modal: 	false
+		modalValue: 	nil
+		version: 	a MCVersion(Capabilities-Handle-VM-jb.3)
+		repository: 	a MCHttpRepository(http://www.squeaksource.com/Handle)
+		versions: 	#(#('Capabilities-Handle-VM' 'jb' 6 'Capabilities-Handle-VM-jb.6.mcz'...etc...
+		loaded: 	a Set('SUnitGUI-StephaneDucasse.56' 'Collections-Weak-StephaneDucasse.2...etc...
+		newer: 	a Set()
+		inherited: 	a Set('Monticello-al.306' 'FixUnderscores-bf.5' 'Metacello-Core-dkh....etc...
+		packageList: 	an Array(a Text for 'Alien-VMMaker-Support' a Text for 'Capabiliti...etc...
+		selectedPackage: 	'Capabilities-Handle-VM'
+		selectedVersion: 	'Capabilities-Handle-VM-jb.3.mcz'
+		order: 	5
+		versionInfo: 	nil
+
+
+MCFileRepositoryInspector(MCVersionInspector)>>changes
+	Receiver: a MCFileRepositoryInspector
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		morph: 	nil
+		label: 	nil
+		modal: 	false
+		modalValue: 	nil
+		version: 	a MCVersion(Capabilities-Handle-VM-jb.3)
+		repository: 	a MCHttpRepository(http://www.squeaksource.com/Handle)
+		versions: 	#(#('Capabilities-Handle-VM' 'jb' 6 'Capabilities-Handle-VM-jb.6.mcz'...etc...
+		loaded: 	a Set('SUnitGUI-StephaneDucasse.56' 'Collections-Weak-StephaneDucasse.2...etc...
+		newer: 	a Set()
+		inherited: 	a Set('Monticello-al.306' 'FixUnderscores-bf.5' 'Metacello-Core-dkh....etc...
+		packageList: 	an Array(a Text for 'Alien-VMMaker-Support' a Text for 'Capabiliti...etc...
+		selectedPackage: 	'Capabilities-Handle-VM'
+		selectedVersion: 	'Capabilities-Handle-VM-jb.3.mcz'
+		order: 	5
+		versionInfo: 	nil
+
+
+PluggableButtonMorphPlus(PluggableButtonMorph)>>performAction
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus>>performAction
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+[] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	a PluggableButtonMorphPlus(261)
+		m: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a PluggableButtonM...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+		index: 	4
+		indexLimiT: 	9
+	Receiver's instance variables: 
+an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a PluggableButtonM...etc...
+
+PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+		all: 	an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a ...etc...
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus(Morph)>>handleMouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [380@50 mouseUp 301696 nil]
+	Arguments and temporary variables: 
+		anObject: 	a PluggableButtonMorphPlus(261)
+	Receiver's instance variables: 
+		timeStamp: 	301696
+		source: 	a HandMorph(3216)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	380@50
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+PluggableButtonMorphPlus(Morph)>>handleEvent:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus(Morph)>>handleFocusEvent:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+[] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309222 nil]
+		targetOffset: 	22@22
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309222 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+[] in PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1627@998
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PluggableStandardWindow(3976) a Syst...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+BlockClosure>>on:do:
+	Receiver: [closure] in PasteUpMorph>>becomeActiveDuring:
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+		handlerActive: 	true
+	Receiver's instance variables: 
+		outerContext: 	PasteUpMorph>>becomeActiveDuring:
+		startpc: 	67
+		numArgs: 	0
+
+
+PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in HandMorph>>sendFocusEvent:to:clear:
+		priorWorld: 	a PasteUpMorph(1622) [world]
+		priorHand: 	a HandMorph(3216)
+		priorEvent: 	[380@50 mouseOver red nil nil]
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1627@998
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PluggableStandardWindow(3976) a Syst...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		aBlock: 	[closure] in HandMorph>>sendMouseEvent:
+		w: 	a PasteUpMorph(1622) [world]
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309222 nil]
+		targetOffset: 	22@22
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309222 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		aBlock: 	[closure] in HandMorph>>sendMouseEvent:
+		result: 	nil
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309222 nil]
+		targetOffset: 	22@22
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309222 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309222 nil]
+		targetOffset: 	22@22
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309222 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>handleEvent:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		evt: 	[380@50 mouseUp 301696 nil]
+		ofs: 	nil
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309222 nil]
+		targetOffset: 	22@22
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309222 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>processEvents
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+		evtBuf: 	#(1 301696 380 50 0 0 0 1)
+		type: 	1
+		hadAny: 	false
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309222 nil]
+		targetOffset: 	22@22
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309222 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+[] in WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		h: 	a HandMorph(3216)
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(3216))
+		viewBox: 	0@0 corner: 1627@998
+		canvas: 	a FormCanvas on: DisplayScreen(1627x998x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> an OverflowRowMorph(1608))(an Overflow...etc...
+		lastStepTime: 	309215
+		lastStepMessage: 	nil
+		lastCycleTime: 	309235
+		commandHistory: 	a CommandHistory
+		alarms: 	a Heap()
+		lastAlarmTime: 	309215
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a HandMorph(3216))
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in WorldState>>doOneCycleNowFor:
+		index: 	1
+		indexLimiT: 	1
+	Receiver's instance variables: 
+an Array(a HandMorph(3216))
+
+WorldState>>handsDo:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in WorldState>>doOneCycleNowFor:
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(3216))
+		viewBox: 	0@0 corner: 1627@998
+		canvas: 	a FormCanvas on: DisplayScreen(1627x998x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> an OverflowRowMorph(1608))(an Overflow...etc...
+		lastStepTime: 	309215
+		lastStepMessage: 	nil
+		lastCycleTime: 	309235
+		commandHistory: 	a CommandHistory
+		alarms: 	a Heap()
+		lastAlarmTime: 	309215
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a PasteUpMorph(1622) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(3216))
+		viewBox: 	0@0 corner: 1627@998
+		canvas: 	a FormCanvas on: DisplayScreen(1627x998x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> an OverflowRowMorph(1608))(an Overflow...etc...
+		lastStepTime: 	309215
+		lastStepMessage: 	nil
+		lastCycleTime: 	309235
+		commandHistory: 	a CommandHistory
+		alarms: 	a Heap()
+		lastAlarmTime: 	309215
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+WorldState>>doOneCycleFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		aWorld: 	a PasteUpMorph(1622) [world]
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(3216))
+		viewBox: 	0@0 corner: 1627@998
+		canvas: 	a FormCanvas on: DisplayScreen(1627x998x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> an OverflowRowMorph(1608))(an Overflow...etc...
+		lastStepTime: 	309215
+		lastStepMessage: 	nil
+		lastCycleTime: 	309235
+		commandHistory: 	a CommandHistory
+		alarms: 	a Heap()
+		lastAlarmTime: 	309215
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+
+--- The full stack ---
+Deprecation(Warning)>>defaultAction
+Deprecation>>defaultAction
+UndefinedObject>>handleSignal:
+MethodContext(ContextPart)>>handleSignal:
+Deprecation(Exception)>>signal
+PSMCPatchMorph(Object)>>deprecated:on:in:
+PSMCPatchMorph(Object)>>initialExtent
+PSMCPatchMorph(Morph)>>initialExtent
+PSMCPatchMorph(DiffChangeMorph)>>initialize
+PSMCPatchMorph>>initialize
+PSMCPatchMorph class(Behavior)>>new
+PSMCPatchMorph class(MorphicModel class)>>new
+PSMCPatchMorph class>>forPatch:
+MCFileRepositoryInspector(MCVersionInspector)>>viewChanges:from:to:
+MCFileRepositoryInspector(MCVersionInspector)>>changes
+PluggableButtonMorphPlus(PluggableButtonMorph)>>performAction
+PluggableButtonMorphPlus>>performAction
+[] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+Array(SequenceableCollection)>>do:
+PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+PluggableButtonMorphPlus>>mouseUp:
+PluggableButtonMorphPlus(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+PluggableButtonMorphPlus(Morph)>>handleEvent:
+PluggableButtonMorphPlus(Morph)>>handleFocusEvent:
+[] in HandMorph>>sendFocusEvent:to:clear:
+[] in PasteUpMorph>>becomeActiveDuring:
+BlockClosure>>on:do:
+PasteUpMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[] in WorldState>>doOneCycleNowFor:
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+ - - - - - - - - - - - - - - -  
+			- - - - - - - - - - - - - - - - - -
+PasteUpMorph>>doOneCycle
+[] in Project class>>spawnNewProcess
+[] in BlockClosure>>newProcess
+------------------------------------------------------------
+
+THERE_BE_DRAGONS_HERE
+Warning
+8 October 2010 1:16:08 pm
+
+VM: Mac OS - intel - 1064 - Squeak4.1 of 17 April 2010 [latest update: #9957] Squeak VM 4.2.5b1
+Image: PharoCore1.1ALPHA [Latest update: #11239]
+
+SecurityManager state:
+Restricted: false
+FileAccess: true
+SocketAccess: true
+Working Dir /Users/arnaudj/Desktop/GIT/Handle/VM
+Trusted Dir /foobar/tooBar/forSqueak/bogus
+Untrusted Dir /Users/arnaudj/Library/Preferences/Squeak/Internet/My Squeak
+
+Deprecation(Warning)>>defaultAction
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+Deprecation>>defaultAction
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+		log: 	nil
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+UndefinedObject>>handleSignal:
+	Receiver: nil
+	Arguments and temporary variables: 
+		exception: 	Deprecation: The method Object initialExtent has been deprecated.
+Do...etc...
+	Receiver's instance variables: 
+nil
+
+MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	Deprecation: The method Object initialExtent has been deprecated.
+Do...etc...
+		val: 	nil
+	Receiver's instance variables: 
+		sender: 	PasteUpMorph>>becomeActiveDuring:
+		pc: 	17
+		stackp: 	3
+		method: 	(BlockClosure>>#on:do: "a CompiledMethod(1699)")
+		closureOrNil: 	nil
+		receiver: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+
+
+Deprecation(Exception)>>signal
+	Receiver: Deprecation: The method Object initialExtent has been deprecated.
+Do not use this method. ...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	Deprecation(Exception)>>signal
+		handlerContext: 	nil
+		outerContext: 	nil
+		methodReference: 	a MethodReference Object >> #initialExtent
+		explanationString: 	'Do not use this method. It will disappear soon'
+		deprecationDate: 	'20 February 2010'
+		versionString: 	'Pharo1.1'
+
+
+DiffMorph(Object)>>deprecated:on:in:
+	Receiver: a DiffMorph(1176)
+	Arguments and temporary variables: 
+		anExplanationString: 	'Do not use this method. It will disappear soon'
+		date: 	'20 February 2010'
+		version: 	'Pharo1.1'
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a PanelMorph(2308) a DiffMapMorph(2057) a ScrollBar(1501) a...etc...
+		fullBounds: 	nil
+		color: 	Color white
+		extension: 	a MorphExtension (3320) [other:  (myDependents -> a DependentsArray(...etc...
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		srcText: 	nil
+		dstText: 	nil
+		prettyPrint: 	false
+		contextClass: 	nil
+		srcMorph: 	a PluggableTextEditorMorph(2566)
+		dstMorph: 	a PluggableTextEditorMorph(4009)
+		scrollbarMorph: 	a ScrollBar(1501)
+		mapMorph: 	a DiffMapMorph(2057)
+		joinMorph: 	a DiffJoinMorph(1612)
+		difference: 	nil
+		joinMappings: 	nil
+
+
+DiffMorph(Object)>>initialExtent
+	Receiver: a DiffMorph(1176)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a PanelMorph(2308) a DiffMapMorph(2057) a ScrollBar(1501) a...etc...
+		fullBounds: 	nil
+		color: 	Color white
+		extension: 	a MorphExtension (3320) [other:  (myDependents -> a DependentsArray(...etc...
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		srcText: 	nil
+		dstText: 	nil
+		prettyPrint: 	false
+		contextClass: 	nil
+		srcMorph: 	a PluggableTextEditorMorph(2566)
+		dstMorph: 	a PluggableTextEditorMorph(4009)
+		scrollbarMorph: 	a ScrollBar(1501)
+		mapMorph: 	a DiffMapMorph(2057)
+		joinMorph: 	a DiffJoinMorph(1612)
+		difference: 	nil
+		joinMappings: 	nil
+
+
+DiffMorph(Morph)>>initialExtent
+	Receiver: a DiffMorph(1176)
+	Arguments and temporary variables: 
+		ext: 	nil
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a PanelMorph(2308) a DiffMapMorph(2057) a ScrollBar(1501) a...etc...
+		fullBounds: 	nil
+		color: 	Color white
+		extension: 	a MorphExtension (3320) [other:  (myDependents -> a DependentsArray(...etc...
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		srcText: 	nil
+		dstText: 	nil
+		prettyPrint: 	false
+		contextClass: 	nil
+		srcMorph: 	a PluggableTextEditorMorph(2566)
+		dstMorph: 	a PluggableTextEditorMorph(4009)
+		scrollbarMorph: 	a ScrollBar(1501)
+		mapMorph: 	a DiffMapMorph(2057)
+		joinMorph: 	a DiffJoinMorph(1612)
+		difference: 	nil
+		joinMappings: 	nil
+
+
+DiffMorph>>initialize
+	Receiver: a DiffMorph(1176)
+	Arguments and temporary variables: 
+		exv: 	a ValueHolder
+		exh: 	a ValueHolder
+		opts: 	a PanelMorph(2308)
+		ppCheckbox: 	a CheckboxMorph(421)
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 200@100
+		owner: 	nil
+		submorphs: 	an Array(a PanelMorph(2308) a DiffMapMorph(2057) a ScrollBar(1501) a...etc...
+		fullBounds: 	nil
+		color: 	Color white
+		extension: 	a MorphExtension (3320) [other:  (myDependents -> a DependentsArray(...etc...
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		srcText: 	nil
+		dstText: 	nil
+		prettyPrint: 	false
+		contextClass: 	nil
+		srcMorph: 	a PluggableTextEditorMorph(2566)
+		dstMorph: 	a PluggableTextEditorMorph(4009)
+		scrollbarMorph: 	a ScrollBar(1501)
+		mapMorph: 	a DiffMapMorph(2057)
+		joinMorph: 	a DiffJoinMorph(1612)
+		difference: 	nil
+		joinMappings: 	nil
+
+
+DiffMorph class(Behavior)>>new
+	Receiver: DiffMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	ComposableMorph
+		methodDict: 	a MethodDictionary(#additionColor->(DiffMorph>>#additionColor "a Co...etc...
+		format: 	174
+		instanceVariables: 	#('srcText' 'dstText' 'prettyPrint' 'contextClass' 'srcMorph...etc...
+		organization: 	('accessing' contextClass contextClass: difference difference: ds...etc...
+		subclasses: 	{MergeDiffMorph}
+		name: 	#DiffMorph
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	nil
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+DiffMorph class(MorphicModel class)>>new
+	Receiver: DiffMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	ComposableMorph
+		methodDict: 	a MethodDictionary(#additionColor->(DiffMorph>>#additionColor "a Co...etc...
+		format: 	174
+		instanceVariables: 	#('srcText' 'dstText' 'prettyPrint' 'contextClass' 'srcMorph...etc...
+		organization: 	('accessing' contextClass contextClass: difference difference: ds...etc...
+		subclasses: 	{MergeDiffMorph}
+		name: 	#DiffMorph
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	nil
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+PSMCPatchMorph(DiffChangeMorph)>>newDiffMorph
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 700@500
+		owner: 	nil
+		submorphs: 	an Array(a DiffMorph(1198) a PanelMorph(3857))
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (3075)
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	a DiffMorph(1198)
+		descriptionMorph: 	a PanelMorph(3857)
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph>>initialize
+	Receiver: a PSMCPatchMorph(3798)
+	Arguments and temporary variables: 
+		descriptionHeight: 	nil
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 700@500
+		owner: 	nil
+		submorphs: 	an Array(a DiffMorph(1198) a PanelMorph(3857))
+		fullBounds: 	nil
+		color: 	Color transparent
+		extension: 	a MorphExtension (3075)
+		borderWidth: 	1
+		borderColor: 	#inset
+		model: 	nil
+		slotName: 	nil
+		open: 	false
+		diffMorph: 	a DiffMorph(1198)
+		descriptionMorph: 	a PanelMorph(3857)
+		changeTree: 	nil
+		selectedChangeWrapper: 	nil
+
+
+PSMCPatchMorph class(Behavior)>>new
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+PSMCPatchMorph class(MorphicModel class)>>new
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+PSMCPatchMorph class>>forPatch:
+	Receiver: PSMCPatchMorph
+	Arguments and temporary variables: 
+		aPatch: 	a MCPatch
+	Receiver's instance variables: 
+		superclass: 	DiffChangeMorph
+		methodDict: 	a MethodDictionary(#browseClass->(PSMCPatchMorph>>#browseClass "a C...etc...
+		format: 	160
+		instanceVariables: 	#('changeTree' 'selectedChangeWrapper')
+		organization: 	('accessing' changeTree changeTree: selectedChange selectedChange...etc...
+		subclasses: 	{PSMCMergePatchMorph}
+		name: 	#PSMCPatchMorph
+		classPool: 	a Dictionary(#UsedByDefault->true )
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Polymorph-Tools-Diff'
+		traitComposition: 	{}
+		localSelectors: 	nil
+		prototype: 	nil
+
+
+MCFileRepositoryInspector(MCVersionInspector)>>viewChanges:from:to:
+	Receiver: a MCFileRepositoryInspector
+	Arguments and temporary variables: 
+		patch: 	a MCPatch
+		fromDescription: 	'Capabilities-Handle-VM (Capabilities-Handle-VM-jb.6)'
+		toDescription: 	'Capabilities-Handle-VM-jb.3'
+		title: 	'Changes from Capabilities-Handle-VM (Capabilities-Handle-VM-jb.6) to Ca...etc...
+	Receiver's instance variables: 
+		morph: 	nil
+		label: 	nil
+		modal: 	false
+		modalValue: 	nil
+		version: 	a MCVersion(Capabilities-Handle-VM-jb.3)
+		repository: 	a MCHttpRepository(http://www.squeaksource.com/Handle)
+		versions: 	#(#('Capabilities-Handle-VM' 'jb' 6 'Capabilities-Handle-VM-jb.6.mcz'...etc...
+		loaded: 	a Set('SUnitGUI-StephaneDucasse.56' 'Collections-Weak-StephaneDucasse.2...etc...
+		newer: 	a Set()
+		inherited: 	a Set('Monticello-al.306' 'FixUnderscores-bf.5' 'Metacello-Core-dkh....etc...
+		packageList: 	an Array(a Text for 'Alien-VMMaker-Support' a Text for 'Capabiliti...etc...
+		selectedPackage: 	'Capabilities-Handle-VM'
+		selectedVersion: 	'Capabilities-Handle-VM-jb.3.mcz'
+		order: 	5
+		versionInfo: 	nil
+
+
+MCFileRepositoryInspector(MCVersionInspector)>>changes
+	Receiver: a MCFileRepositoryInspector
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		morph: 	nil
+		label: 	nil
+		modal: 	false
+		modalValue: 	nil
+		version: 	a MCVersion(Capabilities-Handle-VM-jb.3)
+		repository: 	a MCHttpRepository(http://www.squeaksource.com/Handle)
+		versions: 	#(#('Capabilities-Handle-VM' 'jb' 6 'Capabilities-Handle-VM-jb.6.mcz'...etc...
+		loaded: 	a Set('SUnitGUI-StephaneDucasse.56' 'Collections-Weak-StephaneDucasse.2...etc...
+		newer: 	a Set()
+		inherited: 	a Set('Monticello-al.306' 'FixUnderscores-bf.5' 'Metacello-Core-dkh....etc...
+		packageList: 	an Array(a Text for 'Alien-VMMaker-Support' a Text for 'Capabiliti...etc...
+		selectedPackage: 	'Capabilities-Handle-VM'
+		selectedVersion: 	'Capabilities-Handle-VM-jb.3.mcz'
+		order: 	5
+		versionInfo: 	nil
+
+
+PluggableButtonMorphPlus(PluggableButtonMorph)>>performAction
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus>>performAction
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+[] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	a PluggableButtonMorphPlus(261)
+		m: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a PluggableButtonM...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+		index: 	4
+		indexLimiT: 	9
+	Receiver's instance variables: 
+an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a PluggableButtonM...etc...
+
+PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+		all: 	an Array(a PluggableButtonMorphPlus(7) a PluggableButtonMorphPlus(4015) a ...etc...
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus>>mouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus(Morph)>>handleMouseUp:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [380@50 mouseUp 301696 nil]
+	Arguments and temporary variables: 
+		anObject: 	a PluggableButtonMorphPlus(261)
+	Receiver's instance variables: 
+		timeStamp: 	301696
+		source: 	a HandMorph(3216)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	380@50
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+PluggableButtonMorphPlus(Morph)>>handleEvent:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+PluggableButtonMorphPlus(Morph)>>handleFocusEvent:
+	Receiver: a PluggableButtonMorphPlus(261)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	354@30 corner: 425@56
+		owner: 	a PluggableThemedPanelMorph(3304)
+		submorphs: 	an Array(an AlignmentMorph(1464))
+		fullBounds: 	354@30 corner: 425@56
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (2033) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a MCFileRepositoryInspector
+		label: 	'Changes'
+		getStateSelector: 	#buttonSelected
+		actionSelector: 	#changes
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	Color white
+		onColor: 	Color veryLightGray
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+		enabled: 	true
+		action: 	nil
+		getColorSelector: 	nil
+		getEnabledSelector: 	#hasVersion
+
+
+[] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309923 nil]
+		targetOffset: 	22@21
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309923 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+[] in PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1627@998
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PluggableStandardWindow(3976) a Syst...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+BlockClosure>>on:do:
+	Receiver: [closure] in PasteUpMorph>>becomeActiveDuring:
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+		handlerActive: 	true
+	Receiver's instance variables: 
+		outerContext: 	PasteUpMorph>>becomeActiveDuring:
+		startpc: 	67
+		numArgs: 	0
+
+
+PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in HandMorph>>sendFocusEvent:to:clear:
+		priorWorld: 	a PasteUpMorph(1622) [world]
+		priorHand: 	a HandMorph(3216)
+		priorEvent: 	[380@50 mouseOver red nil nil]
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1627@998
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PluggableStandardWindow(3976) a Syst...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		aBlock: 	[closure] in HandMorph>>sendMouseEvent:
+		w: 	a PasteUpMorph(1622) [world]
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309923 nil]
+		targetOffset: 	22@21
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309923 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		focusHolder: 	a PluggableButtonMorphPlus(261)
+		aBlock: 	[closure] in HandMorph>>sendMouseEvent:
+		result: 	nil
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309923 nil]
+		targetOffset: 	22@21
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309923 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309923 nil]
+		targetOffset: 	22@21
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309923 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>handleEvent:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[380@50 mouseUp 301696 nil]
+		evt: 	[380@50 mouseUp 301696 nil]
+		ofs: 	nil
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309923 nil]
+		targetOffset: 	22@21
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309923 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+HandMorph>>processEvents
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		evt: 	[380@50 mouseUp 301696 nil]
+		evtBuf: 	#(1 301696 380 50 0 0 0 1)
+		type: 	1
+		hadAny: 	false
+	Receiver's instance variables: 
+		bounds: 	1008@189 corner: 1024@205
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	1008@189 corner: 1024@205
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableListMorphPlus(3307)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[1008@189 mouseUp 309923 nil]
+		targetOffset: 	22@21
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 309923 1008 189 0 0 0 1)
+		lastKeyScanCode: 	126
+		combinedChar: 	nil
+
+
+[] in WorldState>>doOneCycleNowFor:
+	Receiver: a WorldState
+	Arguments and temporary variables: 
+		h: 	a HandMorph(3216)
+	Receiver's instance variables: 
+		hands: 	an Array(a HandMorph(3216))
+		viewBox: 	0@0 corner: 1627@998
+		canvas: 	a FormCanvas on: DisplayScreen(1627x998x32)
+		damageRecorder: 	a DamageRecorder
+		stepList: 	a Heap(StepMessage(#stepAt: -> an OverflowRowMorph(1608))(an Overflow...etc...
+		lastStepTime: 	309918
+		lastStepMessage: 	nil
+		lastCycleTime: 	309938
+		commandHistory: 	a CommandHistory
+		alarms: 	a Heap()
+		lastAlarmTime: 	309918
+		menuBuilder: 	a PragmaMenuBuilder
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a HandMorph(3216))
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in WorldState>>doOneCycleNowFor:
+		index: 	1
+		indexLimiT: 	1
+	Receiver's instance variables: 
+an Array(a HandMorph(3216))
+
+
+--- The full stack ---
+Deprecation(Warning)>>defaultAction
+Deprecation>>defaultAction
+UndefinedObject>>handleSignal:
+MethodContext(ContextPart)>>handleSignal:
+Deprecation(Exception)>>signal
+DiffMorph(Object)>>deprecated:on:in:
+DiffMorph(Object)>>initialExtent
+DiffMorph(Morph)>>initialExtent
+DiffMorph>>initialize
+DiffMorph class(Behavior)>>new
+DiffMorph class(MorphicModel class)>>new
+PSMCPatchMorph(DiffChangeMorph)>>newDiffMorph
+PSMCPatchMorph>>initialize
+PSMCPatchMorph class(Behavior)>>new
+PSMCPatchMorph class(MorphicModel class)>>new
+PSMCPatchMorph class>>forPatch:
+MCFileRepositoryInspector(MCVersionInspector)>>viewChanges:from:to:
+MCFileRepositoryInspector(MCVersionInspector)>>changes
+PluggableButtonMorphPlus(PluggableButtonMorph)>>performAction
+PluggableButtonMorphPlus>>performAction
+[] in PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+Array(SequenceableCollection)>>do:
+PluggableButtonMorphPlus(PluggableButtonMorph)>>mouseUp:
+PluggableButtonMorphPlus>>mouseUp:
+PluggableButtonMorphPlus(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+PluggableButtonMorphPlus(Morph)>>handleEvent:
+PluggableButtonMorphPlus(Morph)>>handleFocusEvent:
+[] in HandMorph>>sendFocusEvent:to:clear:
+[] in PasteUpMorph>>becomeActiveDuring:
+BlockClosure>>on:do:
+PasteUpMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[] in WorldState>>doOneCycleNowFor:
+Array(SequenceableCollection)>>do:
+ - - - - - - - - - - - - - - -  
+			- - - - - - - - - - - - - - - - - -
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+PasteUpMorph>>doOneCycle
+[] in Project class>>spawnNewProcess
+[] in BlockClosure>>newProcess
+------------------------------------------------------------
+
+THERE_BE_DRAGONS_HERE
+Error: attempt to index non-existent element in an ordered collection
+25 November 2010 1:44:44 pm
+
+VM: Mac OS - intel - 1065 - Squeak4.1 of 17 April 2010 [latest update: #9957] Squeak VM 4.2.5b1
+Image: PharoCore1.1ALPHA [Latest update: #11239]
+
+SecurityManager state:
+Restricted: false
+FileAccess: true
+SocketAccess: true
+Working Dir /Users/arnaudj/Desktop/GIT/Handle/VM
+Trusted Dir /foobar/tooBar/forSqueak/bogus
+Untrusted Dir /Users/arnaudj/Library/Preferences/Squeak/Internet/My Squeak
+
+OrderedCollection(Object)>>error:
+	Receiver: an OrderedCollection('HandleVM with State,Behavior and Configuration .changes' 'HandleVM w...etc...
+	Arguments and temporary variables: 
+		aString: 	'attempt to index non-existent element in an ordered collection'
+	Receiver's instance variables: 
+		array: 	#(nil nil 'HandleVM with State,Behavior and Configuration .changes' 'Han...etc...
+		firstIndex: 	3
+		lastIndex: 	6
+
+
+OrderedCollection>>errorNoSuchElement
+	Receiver: an OrderedCollection('HandleVM with State,Behavior and Configuration .changes' 'HandleVM w...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		array: 	#(nil nil 'HandleVM with State,Behavior and Configuration .changes' 'Han...etc...
+		firstIndex: 	3
+		lastIndex: 	6
+
+
+OrderedCollection>>at:
+	Receiver: an OrderedCollection('HandleVM with State,Behavior and Configuration .changes' 'HandleVM w...etc...
+	Arguments and temporary variables: 
+		anInteger: 	0
+	Receiver's instance variables: 
+		array: 	#(nil nil 'HandleVM with State,Behavior and Configuration .changes' 'Han...etc...
+		firstIndex: 	3
+		lastIndex: 	6
+
+
+StandardFileStream class>>readOnlyFileDoesNotExistUserHandling:
+	Receiver: StandardFileStream
+	Arguments and temporary variables: 
+		t1: 	'/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behavior and Conf...etc...
+		t2: 	UnixFileDirectory on '/Users/arnaudj/Desktop/GIT/Handle/VM'
+		t3: 	#('.DS_Store' 'HandleVM with State,Behavior and Configuration .changes' 'Ha...etc...
+		t4: 	an OrderedCollection('HandleVM with State,Behavior and Configuration .chang...etc...
+		t5: 	0
+		t6: 	nil
+		t7: 	'HandleVM with State,Behavior and Configuration .1.changes'
+	Receiver's instance variables: 
+		superclass: 	FileStream
+		methodDict: 	a MethodDictionary(#actAsExecutor->(StandardFileStream>>#actAsExecu...etc...
+		format: 	146
+		instanceVariables: 	#('name' 'fileID' 'buffer1')
+		organization: 	('*compression' compressFile)
+('access' directory directoryUrl fi...etc...
+		subclasses: 	{CrLfFileStream. MultiByteFileStream}
+		name: 	#StandardFileStream
+		classPool: 	a Dictionary(#Registry->a WeakRegistry(<this WeakRegistry is locked>...etc...
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Files-Kernel'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+FileDoesNotExistException>>defaultAction
+	Receiver: FileDoesNotExistException: '/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behav...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	FileDoesNotExistException(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		fileName: 	'/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behavior an...etc...
+		readOnly: 	true
+
+
+UndefinedObject>>handleSignal:
+	Receiver: nil
+	Arguments and temporary variables: 
+		exception: 	FileDoesNotExistException: '/Users/arnaudj/Desktop/GIT/Handle/VM/Han...etc...
+	Receiver's instance variables: 
+nil
+
+FileDoesNotExistException(Exception)>>pass
+	Receiver: FileDoesNotExistException: '/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behav...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	FileDoesNotExistException(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		fileName: 	'/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behavior an...etc...
+		readOnly: 	true
+
+
+[] in PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		priorWorld: 	FileDoesNotExistException: '/Users/arnaudj/Desktop/GIT/Handle/VM/Ha...etc...
+		priorHand: 	a PasteUpMorph(1622) [world]
+		priorEvent: 	a HandMorph(3216)
+		ex: 	[469@266 mouseOver red nil nil]
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1425@1134
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PreDebugWindow(924) a SystemWindow(3...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+BlockClosure>>valueWithPossibleArgs:
+	Receiver: [closure] in PasteUpMorph>>becomeActiveDuring:
+	Arguments and temporary variables: 
+		anArray: 	an Array(FileDoesNotExistException: '/Users/arnaudj/Desktop/GIT/Handle...etc...
+	Receiver's instance variables: 
+		outerContext: 	PasteUpMorph>>becomeActiveDuring:
+		startpc: 	78
+		numArgs: 	1
+
+
+[] in MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	FileDoesNotExistException: '/Users/arnaudj/Desktop/GIT/Handle/VM/Han...etc...
+	Receiver's instance variables: 
+		sender: 	PasteUpMorph>>becomeActiveDuring:
+		pc: 	17
+		stackp: 	3
+		method: 	(BlockClosure>>#on:do: "a CompiledMethod(1699)")
+		closureOrNil: 	nil
+		receiver: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+
+
+BlockClosure>>ensure:
+	Receiver: [closure] in MethodContext(ContextPart)>>handleSignal:
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in MethodContext(ContextPart)>>handleSignal:
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	MethodContext(ContextPart)>>handleSignal:
+		startpc: 	90
+		numArgs: 	0
+
+
+MethodContext(ContextPart)>>handleSignal:
+	Receiver: BlockClosure>>on:do:
+	Arguments and temporary variables: 
+		exception: 	FileDoesNotExistException: '/Users/arnaudj/Desktop/GIT/Handle/VM/Han...etc...
+		val: 	nil
+	Receiver's instance variables: 
+		sender: 	PasteUpMorph>>becomeActiveDuring:
+		pc: 	17
+		stackp: 	3
+		method: 	(BlockClosure>>#on:do: "a CompiledMethod(1699)")
+		closureOrNil: 	nil
+		receiver: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+
+
+FileDoesNotExistException(Exception)>>signal
+	Receiver: FileDoesNotExistException: '/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behav...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		messageText: 	nil
+		tag: 	nil
+		signalContext: 	FileDoesNotExistException(Exception)>>signal
+		handlerContext: 	BlockClosure>>on:do:
+		outerContext: 	nil
+		fileName: 	'/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behavior an...etc...
+		readOnly: 	true
+
+
+MultiByteFileStream class(StandardFileStream class)>>readOnlyFileNamed:
+	Receiver: MultiByteFileStream
+	Arguments and temporary variables: 
+		fileName: 	'/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behavior an...etc...
+		fullName: 	'/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behavior an...etc...
+		f: 	nil
+	Receiver's instance variables: 
+		superclass: 	StandardFileStream
+		methodDict: 	a MethodDictionary(#accepts:->(MultiByteFileStream>>#accepts: "a Co...etc...
+		format: 	152
+		instanceVariables: 	#('converter' 'lineEndConvention' 'wantsLineEndConversion')
+		organization: 	('accessing' ascii binary converter converter: fileInEncodingName...etc...
+		subclasses: 	nil
+		name: 	#MultiByteFileStream
+		classPool: 	a Dictionary(#Cr->Character cr #CrLf->'
+
+' #Lf->Character lf #LineEn...etc...
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Multilingual-TextConversion'
+		traitComposition: 	{}
+		localSelectors: 	nil
+
+
+MultiByteFileStream(StandardFileStream)>>readOnlyCopy
+	Receiver: MultiByteFileStream: '/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with State,Behavior an...etc...
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+
+
+
+[] in VersionsBrowser>>scanVersionsOf:class:meta:category:selector:
+	Receiver: a VersionsBrowser
+	Arguments and temporary variables: 
+		x: 	MultiByteFileStream: '/Users/arnaudj/Desktop/GIT/Handle/VM/HandleVM with Sta...etc...
+	Receiver's instance variables: 
+		dependents: 	nil
+		contents: 	''
+		currentCompiledMethod: 	(Interpreter>>#returnReceiver "a CompiledMethod(113)")
+		contentsSymbol: 	#showDiffs
+		changeList: 	an OrderedCollection()
+		list: 	an OrderedCollection()
+		listIndex: 	0
+		listSelections: 	nil
+		file: 	nil
+		lostMethodPointer: 	nil
+		showsVersions: 	nil
+		classOfMethod: 	Interpreter
+		selectorOfMethod: 	#returnReceiver
+		addedChangeRecord: 	nil
+
+
+ExpandedSourceFileArray(SequenceableCollection)>>collect:
+	Receiver: an ExpandedSourceFileArray(MultiByteFileStream: '/Users/arnaudj/Downloads/01-10-2010/Pharo...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in VersionsBrowser>>scanVersionsOf:class:meta:category:select...etc...
+		newCollection: 	an ExpandedSourceFileArray(MultiByteFileStream: '/Users/arnaudj/...etc...
+		index: 	2
+		indexLimiT: 	2
+	Receiver's instance variables: 
+		files: 	an Array(MultiByteFileStream: '/Users/arnaudj/Downloads/01-10-2010/Pharo...etc...
+
+
+VersionsBrowser>>scanVersionsOf:class:meta:category:selector:
+	Receiver: a VersionsBrowser
+	Arguments and temporary variables: 
+		method: 	(Interpreter>>#returnReceiver "a CompiledMethod(113)")
+		class: 	Interpreter
+		meta: 	false
+		category: 	#'handle use'
+		selector: 	#returnReceiver
+		position: 	12867879
+		prevPos: 	nil
+		prevFileIndex: 	nil
+		preamble: 	nil
+		tokens: 	nil
+		sourceFilesCopy: 	nil
+		stamp: 	nil
+		cat: 	#'handle use'
+		change: 	nil
+	Receiver's instance variables: 
+		dependents: 	nil
+		contents: 	''
+		currentCompiledMethod: 	(Interpreter>>#returnReceiver "a CompiledMethod(113)")
+		contentsSymbol: 	#showDiffs
+		changeList: 	an OrderedCollection()
+		list: 	an OrderedCollection()
+		listIndex: 	0
+		listSelections: 	nil
+		file: 	nil
+		lostMethodPointer: 	nil
+		showsVersions: 	nil
+		classOfMethod: 	Interpreter
+		selectorOfMethod: 	#returnReceiver
+		addedChangeRecord: 	nil
+
+
+[] in VersionsBrowser class>>browseVersionsOf:class:meta:category:selector:lostMethodPointer:
+	Receiver: VersionsBrowser
+	Arguments and temporary variables: 
+<<error during printing>
+	Receiver's instance variables: 
+		superclass: 	ChangeList
+		methodDict: 	a MethodDictionary(#addPriorVersionsCountForSelector:ofClass:to:->(...etc...
+		format: 	158
+		instanceVariables: 	#('classOfMethod' 'selectorOfMethod' 'addedChangeRecord')
+		organization: 	('*Polymorph-Tools-Diff-override' compareToOtherVersion)
+('init &...etc...
+		subclasses: 	{ClassCommentVersionsBrowser}
+		name: 	#VersionsBrowser
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Tools-Changes'
+		traitComposition: 	nil
+		localSelectors: 	nil
+
+
+BlockClosure>>ensure:
+	Receiver: [closure] in VersionsBrowser class>>browseVersionsOf:class:meta:category:selector:lostMeth...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in CursorWithMask(Cursor)>>showWhile:
+		complete: 	nil
+		returnValue: 	nil
+	Receiver's instance variables: 
+		outerContext: 	VersionsBrowser class>>browseVersionsOf:class:meta:category:selec...etc...
+		startpc: 	68
+		numArgs: 	0
+
+
+CursorWithMask(Cursor)>>showWhile:
+	Receiver: ((CursorWithMask
+	extent: 16@16
+	depth: 1
+	fromArray: #(
+		2r0
+		2r0
+		2r0
+		2r10000000010...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in VersionsBrowser class>>browseVersionsOf:class:meta:categor...etc...
+		oldcursor: 	((CursorWithMask
+	extent: 16@16
+	depth: 1
+	fromArray: #(
+		2r0
+		2r1...etc...
+	Receiver's instance variables: 
+		bits: 	a Bitmap of length 16
+		width: 	16
+		height: 	16
+		depth: 	1
+		offset: 	-1@-1
+		maskForm: 	Form(16x16x1)
+
+
+VersionsBrowser class>>browseVersionsOf:class:meta:category:selector:lostMethodPointer:
+	Receiver: VersionsBrowser
+	Arguments and temporary variables: 
+<<error during printing>
+	Receiver's instance variables: 
+		superclass: 	ChangeList
+		methodDict: 	a MethodDictionary(#addPriorVersionsCountForSelector:ofClass:to:->(...etc...
+		format: 	158
+		instanceVariables: 	#('classOfMethod' 'selectorOfMethod' 'addedChangeRecord')
+		organization: 	('*Polymorph-Tools-Diff-override' compareToOtherVersion)
+('init &...etc...
+		subclasses: 	{ClassCommentVersionsBrowser}
+		name: 	#VersionsBrowser
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Tools-Changes'
+		traitComposition: 	nil
+		localSelectors: 	nil
+
+
+VersionsBrowser class>>browseVersionsOf:class:meta:category:selector:
+	Receiver: VersionsBrowser
+	Arguments and temporary variables: 
+		method: 	(Interpreter>>#returnReceiver "a CompiledMethod(113)")
+		class: 	Interpreter
+		meta: 	false
+		msgCategory: 	#'handle use'
+		selector: 	#returnReceiver
+	Receiver's instance variables: 
+		superclass: 	ChangeList
+		methodDict: 	a MethodDictionary(#addPriorVersionsCountForSelector:ofClass:to:->(...etc...
+		format: 	158
+		instanceVariables: 	#('classOfMethod' 'selectorOfMethod' 'addedChangeRecord')
+		organization: 	('*Polymorph-Tools-Diff-override' compareToOtherVersion)
+('init &...etc...
+		subclasses: 	{ClassCommentVersionsBrowser}
+		name: 	#VersionsBrowser
+		classPool: 	nil
+		sharedPools: 	nil
+		environment: 	Smalltalk
+		category: 	#'Tools-Changes'
+		traitComposition: 	nil
+		localSelectors: 	nil
+
+
+Browser(StringHolder)>>browseVersions
+	Receiver: a Browser
+	Arguments and temporary variables: 
+		selector: 	#returnReceiver
+		class: 	Interpreter
+	Receiver's instance variables: 
+		dependents: 	a DependentsArray(a SystemWindow(3972) a PluggableListMorph(767) a ...etc...
+		contents: 	a Text for 'returnReceiver
+	localReturnContext := self sender.
+	local...etc...
+		currentCompiledMethod: 	(Interpreter>>#returnReceiver "a CompiledMethod(113)")
+		contentsSymbol: 	#source
+		systemOrganizer: 	('Announcements-Core' Announcement AnnouncementSet Announcer)
+...etc...
+		classOrganizer: 	('*Alien-VMMaker-Support' getStackPointer internalIsImmutable: ...etc...
+		metaClassOrganizer: 	('constants' bytecodeTable primitiveTable)
+('translation' d...etc...
+		systemCategoryListIndex: 	276
+		classListIndex: 	2
+		messageCategoryListIndex: 	15
+		messageListIndex: 	4
+		editSelection: 	#editMessage
+		metaClassIndicated: 	false
+
+
+PluggableButtonMorph>>performAction
+	Receiver: a PluggableButtonMorph(677)
+	Arguments and temporary variables: 
+
+	Receiver's instance variables: 
+		bounds: 	413@261 corner: 501@288
+		owner: 	an OverflowRowMorph(1136)
+		submorphs: 	an Array(an AlignmentMorph(1380))
+		fullBounds: 	413@261 corner: 501@288
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (3672) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a Browser
+		label: 	'versions'
+		getStateSelector: 	nil
+		actionSelector: 	#browseVersions
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	(Color r: 0.734 g: 0.84 b: 0.702)
+		onColor: 	(Color r: 0.874 g: 1.0 b: 0.835)
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+
+
+[] in PluggableButtonMorph>>mouseUp:
+	Receiver: a PluggableButtonMorph(677)
+	Arguments and temporary variables: 
+		evt: 	a PluggableButtonMorph(677)
+		m: 	[469@266 mouseUp 84800 nil]
+	Receiver's instance variables: 
+		bounds: 	413@261 corner: 501@288
+		owner: 	an OverflowRowMorph(1136)
+		submorphs: 	an Array(an AlignmentMorph(1380))
+		fullBounds: 	413@261 corner: 501@288
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (3672) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a Browser
+		label: 	'versions'
+		getStateSelector: 	nil
+		actionSelector: 	#browseVersions
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	(Color r: 0.734 g: 0.84 b: 0.702)
+		onColor: 	(Color r: 0.874 g: 1.0 b: 0.835)
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+
+
+Array(SequenceableCollection)>>do:
+	Receiver: an Array(a PluggableButtonMorph(478) a PluggableButtonMorph(3261) a PluggableButtonMorph(1...etc...
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in PluggableButtonMorph>>mouseUp:
+		index: 	4
+		indexLimiT: 	7
+	Receiver's instance variables: 
+an Array(a PluggableButtonMorph(478) a PluggableButtonMorph(3261) a PluggableButtonMorph(1...etc...
+
+PluggableButtonMorph>>mouseUp:
+	Receiver: a PluggableButtonMorph(677)
+	Arguments and temporary variables: 
+		evt: 	[469@266 mouseUp 84800 nil]
+		all: 	an Array(a PluggableButtonMorph(478) a PluggableButtonMorph(3261) a Plugga...etc...
+	Receiver's instance variables: 
+		bounds: 	413@261 corner: 501@288
+		owner: 	an OverflowRowMorph(1136)
+		submorphs: 	an Array(an AlignmentMorph(1380))
+		fullBounds: 	413@261 corner: 501@288
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (3672) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a Browser
+		label: 	'versions'
+		getStateSelector: 	nil
+		actionSelector: 	#browseVersions
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	(Color r: 0.734 g: 0.84 b: 0.702)
+		onColor: 	(Color r: 0.874 g: 1.0 b: 0.835)
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+
+
+PluggableButtonMorph(Morph)>>handleMouseUp:
+	Receiver: a PluggableButtonMorph(677)
+	Arguments and temporary variables: 
+		anEvent: 	[469@266 mouseUp 84800 nil]
+	Receiver's instance variables: 
+		bounds: 	413@261 corner: 501@288
+		owner: 	an OverflowRowMorph(1136)
+		submorphs: 	an Array(an AlignmentMorph(1380))
+		fullBounds: 	413@261 corner: 501@288
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (3672) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a Browser
+		label: 	'versions'
+		getStateSelector: 	nil
+		actionSelector: 	#browseVersions
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	(Color r: 0.734 g: 0.84 b: 0.702)
+		onColor: 	(Color r: 0.874 g: 1.0 b: 0.835)
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+
+
+MouseButtonEvent>>sentTo:
+	Receiver: [469@266 mouseUp 84800 nil]
+	Arguments and temporary variables: 
+		anObject: 	a PluggableButtonMorph(677)
+	Receiver's instance variables: 
+		timeStamp: 	84800
+		source: 	a HandMorph(3216)
+		windowIndex: 	nil
+		type: 	#mouseUp
+		buttons: 	0
+		position: 	469@266
+		handler: 	nil
+		wasHandled: 	true
+		whichButton: 	4
+
+
+PluggableButtonMorph(Morph)>>handleEvent:
+	Receiver: a PluggableButtonMorph(677)
+	Arguments and temporary variables: 
+		anEvent: 	[469@266 mouseUp 84800 nil]
+	Receiver's instance variables: 
+		bounds: 	413@261 corner: 501@288
+		owner: 	an OverflowRowMorph(1136)
+		submorphs: 	an Array(an AlignmentMorph(1380))
+		fullBounds: 	413@261 corner: 501@288
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (3672) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a Browser
+		label: 	'versions'
+		getStateSelector: 	nil
+		actionSelector: 	#browseVersions
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	(Color r: 0.734 g: 0.84 b: 0.702)
+		onColor: 	(Color r: 0.874 g: 1.0 b: 0.835)
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+
+
+PluggableButtonMorph(Morph)>>handleFocusEvent:
+	Receiver: a PluggableButtonMorph(677)
+	Arguments and temporary variables: 
+		anEvent: 	[469@266 mouseUp 84800 nil]
+	Receiver's instance variables: 
+		bounds: 	413@261 corner: 501@288
+		owner: 	an OverflowRowMorph(1136)
+		submorphs: 	an Array(an AlignmentMorph(1380))
+		fullBounds: 	413@261 corner: 501@288
+		color: 	(Color r: 0.827 g: 0.827 b: 0.827)
+		extension: 	a MorphExtension (3672) [balloonText]  [other:  (lastState -> false)...etc...
+		borderWidth: 	0
+		borderColor: 	Color transparent
+		model: 	a Browser
+		label: 	'versions'
+		getStateSelector: 	nil
+		actionSelector: 	#browseVersions
+		getLabelSelector: 	nil
+		getMenuSelector: 	nil
+		shortcutCharacter: 	nil
+		askBeforeChanging: 	false
+		triggerOnMouseDown: 	false
+		offColor: 	(Color r: 0.734 g: 0.84 b: 0.702)
+		onColor: 	(Color r: 0.874 g: 1.0 b: 0.835)
+		feedbackColor: 	nil
+		showSelectionFeedback: 	false
+		allButtons: 	nil
+		arguments: 	#()
+		argumentsProvider: 	nil
+		argumentsSelector: 	nil
+		gradientLook: 	true
+
+
+[] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[469@266 mouseUp 84800 nil]
+		focusHolder: 	a PluggableButtonMorph(677)
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	725@315 corner: 741@331
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	725@315 corner: 741@331
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableButtonMorph(3933)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[725@315 mouseUp 90881 nil]
+		targetOffset: 	17@8
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 90881 725 315 0 0 0 1)
+		lastKeyScanCode: 	36
+		combinedChar: 	nil
+
+
+[] in PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in HandMorph>>sendFocusEvent:to:clear:
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1425@1134
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PreDebugWindow(924) a SystemWindow(3...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+BlockClosure>>on:do:
+	Receiver: [closure] in PasteUpMorph>>becomeActiveDuring:
+	Arguments and temporary variables: 
+		exception: 	Error
+		handlerAction: 	[closure] in PasteUpMorph>>becomeActiveDuring:
+		handlerActive: 	false
+	Receiver's instance variables: 
+		outerContext: 	PasteUpMorph>>becomeActiveDuring:
+		startpc: 	67
+		numArgs: 	0
+
+
+PasteUpMorph>>becomeActiveDuring:
+	Receiver: a PasteUpMorph(1622) [world]
+	Arguments and temporary variables: 
+		aBlock: 	[closure] in HandMorph>>sendFocusEvent:to:clear:
+		priorWorld: 	a PasteUpMorph(1622) [world]
+		priorHand: 	a HandMorph(3216)
+		priorEvent: 	[469@266 mouseOver red nil nil]
+	Receiver's instance variables: 
+		bounds: 	0@0 corner: 1425@1134
+		owner: 	nil
+		submorphs: 	an Array(a TaskbarMorph(3095) a PreDebugWindow(924) a SystemWindow(3...etc...
+		fullBounds: 	nil
+		color: 	(Color r: 0.97 g: 0.98 b: 1.0)
+		extension: 	a MorphExtension (2543) [eventHandler = an EventHandler]  [other:  (...etc...
+		borderWidth: 	0
+		borderColor: 	(Color r: 0.03 g: 0.02 b: 0.0)
+		model: 	a MorphicModel(1926)
+		cursor: 	1
+		padding: 	3
+		backgroundMorph: 	nil
+		isPartsBin: 	nil
+		autoLineLayout: 	false
+		indicateCursor: 	nil
+		resizeToFit: 	nil
+		worldState: 	a WorldState
+		griddingOn: 	nil
+
+
+HandMorph>>sendFocusEvent:to:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[469@266 mouseUp 84800 nil]
+		focusHolder: 	a PluggableButtonMorph(677)
+		aBlock: 	[closure] in HandMorph>>sendMouseEvent:
+		w: 	a PasteUpMorph(1622) [world]
+		result: 	#(nil)
+	Receiver's instance variables: 
+		bounds: 	725@315 corner: 741@331
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	725@315 corner: 741@331
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableButtonMorph(3933)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[725@315 mouseUp 90881 nil]
+		targetOffset: 	17@8
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 90881 725 315 0 0 0 1)
+		lastKeyScanCode: 	36
+		combinedChar: 	nil
+
+
+HandMorph>>sendEvent:focus:clear:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[469@266 mouseUp 84800 nil]
+		focusHolder: 	a PluggableButtonMorph(677)
+		aBlock: 	[closure] in HandMorph>>sendMouseEvent:
+		result: 	nil
+	Receiver's instance variables: 
+		bounds: 	725@315 corner: 741@331
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	725@315 corner: 741@331
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableButtonMorph(3933)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[725@315 mouseUp 90881 nil]
+		targetOffset: 	17@8
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 90881 725 315 0 0 0 1)
+		lastKeyScanCode: 	36
+		combinedChar: 	nil
+
+
+HandMorph>>sendMouseEvent:
+	Receiver: a HandMorph(3216)
+	Arguments and temporary variables: 
+		anEvent: 	[469@266 mouseUp 84800 nil]
+	Receiver's instance variables: 
+		bounds: 	725@315 corner: 741@331
+		owner: 	a PasteUpMorph(1622) [world]
+		submorphs: 	#()
+		fullBounds: 	725@315 corner: 741@331
+		color: 	Color blue
+		extension: 	a MorphExtension (539) [eventHandler = an EventHandler] 
+		mouseFocus: 	nil
+		keyboardFocus: 	a PluggableButtonMorph(3933)
+		eventListeners: 	nil
+		mouseListeners: 	nil
+		keyboardListeners: 	nil
+		mouseClickState: 	nil
+		mouseOverHandler: 	a MouseOverHandler
+		lastMouseEvent: 	[725@315 mouseUp 90881 nil]
+		targetOffset: 	17@8
+		damageRecorder: 	a DamageRecorder
+		cacheCanvas: 	nil
+		cachedCanvasHasHoles: 	true
+		temporaryCursor: 	nil
+		temporaryCursorOffset: 	nil
+		hardwareCursor: 	nil
+		hasChanged: 	true
+		savedPatch: 	nil
+		userInitials: 	''
+		lastEventBuffer: 	#(1 90881 725 315 0 0 0 1)
+		lastKeyScanCode: 	36
+		combinedChar: 	nil
+
+
+
+--- The full stack ---
+OrderedCollection(Object)>>error:
+OrderedCollection>>errorNoSuchElement
+OrderedCollection>>at:
+StandardFileStream class>>readOnlyFileDoesNotExistUserHandling:
+FileDoesNotExistException>>defaultAction
+UndefinedObject>>handleSignal:
+FileDoesNotExistException(Exception)>>pass
+[] in PasteUpMorph>>becomeActiveDuring:
+BlockClosure>>valueWithPossibleArgs:
+[] in MethodContext(ContextPart)>>handleSignal:
+BlockClosure>>ensure:
+MethodContext(ContextPart)>>handleSignal:
+FileDoesNotExistException(Exception)>>signal
+MultiByteFileStream class(StandardFileStream class)>>readOnlyFileNamed:
+MultiByteFileStream(StandardFileStream)>>readOnlyCopy
+[] in VersionsBrowser>>scanVersionsOf:class:meta:category:selector:
+ExpandedSourceFileArray(SequenceableCollection)>>collect:
+VersionsBrowser>>scanVersionsOf:class:meta:category:selector:
+[] in VersionsBrowser class>>browseVersionsOf:class:meta:category:selector:lostMethodPointer:
+BlockClosure>>ensure:
+CursorWithMask(Cursor)>>showWhile:
+VersionsBrowser class>>browseVersionsOf:class:meta:category:selector:lostMethodPointer:
+VersionsBrowser class>>browseVersionsOf:class:meta:category:selector:
+Browser(StringHolder)>>browseVersions
+PluggableButtonMorph>>performAction
+[] in PluggableButtonMorph>>mouseUp:
+Array(SequenceableCollection)>>do:
+PluggableButtonMorph>>mouseUp:
+PluggableButtonMorph(Morph)>>handleMouseUp:
+MouseButtonEvent>>sentTo:
+PluggableButtonMorph(Morph)>>handleEvent:
+PluggableButtonMorph(Morph)>>handleFocusEvent:
+[] in HandMorph>>sendFocusEvent:to:clear:
+[] in PasteUpMorph>>becomeActiveDuring:
+BlockClosure>>on:do:
+PasteUpMorph>>becomeActiveDuring:
+HandMorph>>sendFocusEvent:to:clear:
+HandMorph>>sendEvent:focus:clear:
+HandMorph>>sendMouseEvent:
+ - - - - - - - - - - - - - - -  
+			- - - - - - - - - - - - - - - - - -
+HandMorph>>handleEvent:
+HandMorph>>processEvents
+[] in WorldState>>doOneCycleNowFor:
+Array(SequenceableCollection)>>do:
+WorldState>>handsDo:
+WorldState>>doOneCycleNowFor:
+WorldState>>doOneCycleFor:
+PasteUpMorph>>doOneCycle
+[] in Project class>>spawnNewProcess
+[] in BlockClosure>>newProcess
+------------------------------------------------------------
+

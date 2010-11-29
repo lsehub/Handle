@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 14 October 2010 4:32:18 pm 
+/* Automatically generated from Squeak on 26 November 2010 3:31:56 pm 
    by VMMaker 3.11.13
  */
 
@@ -8995,7 +8995,6 @@ register struct foo * foo = &fum;
 				sqInt nArgs;
 				sqInt delta;
 				sqInt localPrimIndex;
-				sqInt oop;
 				sqInt newContext;
 				sqInt where;
 				sqInt methodHeader;
@@ -9055,11 +9054,11 @@ register struct foo * foo = &fum;
 				}
 				/* begin internalExecuteNewMethod */
 				localPrimIndex = foo->primitiveIndex;
+				rcvr = longAtPointer(localSP);
 				if (localPrimIndex > 0) {
 					if ((localPrimIndex > 255) && (localPrimIndex < 520)) {
 						if (localPrimIndex >= 264) {
-							if (internalIsHandle(longAtPointer(localSP))) {
-								rcvr = longAtPointer(localSP);
+							if (internalIsHandle(rcvr)) {
 								/* begin internalPop: */
 								localSP -= 1 * BytesPerWord;
 								/* begin pushReceiverVariableInHandle:ofObject: */
@@ -9075,8 +9074,7 @@ register struct foo * foo = &fum;
 								goto l47;
 							}
 							/* begin internalPop:thenPush: */
-							oop = longAt(((longAtPointer(localSP)) + BaseHeaderSize) + ((localPrimIndex - 264) << ShiftForWord));
-							longAtPointerput(localSP -= (1 - 1) * BytesPerWord, oop);
+							longAtPointerput(localSP -= (1 - 1) * BytesPerWord, longAt((rcvr + BaseHeaderSize) + ((localPrimIndex - 264) << ShiftForWord)));
 							goto l47;
 						} else {
 							if (localPrimIndex == 256) {
@@ -9102,6 +9100,12 @@ register struct foo * foo = &fum;
 							goto l47;
 						}
 					} else {
+						if (internalIsHandle(rcvr)) {
+							/* begin internalPop: */
+							localSP -= 1 * BytesPerWord;
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt((rcvr + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord)));
+						}
 						/* begin externalizeIPandSP */
 						foo->instructionPointer = oopForPointer(localIP);
 						foo->stackPointer = oopForPointer(localSP);
