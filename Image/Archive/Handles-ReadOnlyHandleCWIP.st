@@ -1,0 +1,1 @@
+RewriteMethodWithPropagationHandle subclass: #ReadonlyHandle	instanceVariableNames: ''	classVariableNames: ''	poolDictionaries: ''	category: 'Handles-ReadOnlyHandleCWIP'!
