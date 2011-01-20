@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 8 October 2010 2:26:33 pm 
+/* Automatically generated from Squeak on 19 January 2011 4:30:05 pm 
    by VMMaker 3.11.13
  */
 
@@ -175,9 +175,9 @@ extern
 struct VirtualMachine* interpreterProxy;
 static const char *moduleName =
 #ifdef SQUEAK_BUILTIN_PLUGIN
-	"Klatt 8 October 2010 (i)"
+	"Klatt 19 January 2011 (i)"
 #else
-	"Klatt 8 October 2010 (e)"
+	"Klatt 19 January 2011 (e)"
 #endif
 ;
 static float nlast;

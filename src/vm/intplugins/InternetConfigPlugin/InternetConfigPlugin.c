@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 8 October 2010 2:26:31 pm 
+/* Automatically generated from Squeak on 19 January 2011 4:30:03 pm 
    by VMMaker 3.11.13
  */
 
@@ -59,9 +59,9 @@ extern
 struct VirtualMachine* interpreterProxy;
 static const char *moduleName =
 #ifdef SQUEAK_BUILTIN_PLUGIN
-	"InternetConfigPlugin 8 October 2010 (i)"
+	"InternetConfigPlugin 19 January 2011 (i)"
 #else
-	"InternetConfigPlugin 8 October 2010 (e)"
+	"InternetConfigPlugin 19 January 2011 (e)"
 #endif
 ;
 

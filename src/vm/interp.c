@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 26 November 2010 3:31:56 pm 
+/* Automatically generated from Squeak on 20 January 2011 3:24:15 pm 
    by VMMaker 3.11.13
  */
 
@@ -114,6 +114,7 @@ void error(char *s) {
 #define HandleBit 536870912
 #define HandleClassLookupIndex 1
 #define HandleConfigurationIndex 3
+#define HandlePropagationSelectorIndex 51
 #define HandleReceiverIndex 0
 #define HandleStateIndex 2
 #define HashBits 536739840
@@ -137,7 +138,7 @@ void error(char *s) {
 #define MarkBit 2147483648U
 #define MaxExternalPrimitiveTableSize 4096
 #define MaxJumpBuf 32
-#define MaxPrimitiveIndex 578
+#define MaxPrimitiveIndex 576
 #define MessageArgumentsIndex 1
 #define MessageDictionaryIndex 1
 #define MessageLookupClassIndex 2
@@ -337,6 +338,9 @@ EXPORT(sqInt) getStackPointer(void);
 #pragma export off
 sqInt getThisSessionID(void);
 sqInt growObjectMemory(usqInt delta);
+#pragma export on
+EXPORT(sqInt) handlepropagateValue(sqInt aHandle, sqInt aObject);
+#pragma export off
 sqInt imageFormatForwardCompatibilityVersion(void);
 sqInt imageSegmentVersion(void);
 sqInt incCompBody(void);
@@ -720,15 +724,15 @@ sqInt trueObj;
 sqInt falseObj;
 sqInt interruptCheckCounter;
 sqInt remapBufferCount;
-sqInt primitiveIndex;
 sqInt nextPollTick;
+sqInt primitiveIndex;
 sqInt messageSelector;
 sqInt allocationCount;
-sqInt rootTableCount;
 sqInt compilerInitialized;
-sqInt allocationsBetweenGCs;
+sqInt rootTableCount;
 sqInt lkupClass;
 sqInt receiver;
+sqInt allocationsBetweenGCs;
 sqInt lowSpaceThreshold;
 sqInt signalLowSpace;
 sqInt freeContexts;
@@ -1396,8 +1400,6 @@ char* obsoleteIndexedPrimitiveTable[][3] = {
 { NULL, NULL, NULL },
 { NULL, NULL, NULL },
 { NULL, NULL, NULL },
-{ NULL, NULL, NULL },
-{ NULL, NULL, NULL },
 { NULL, NULL, NULL }
 };
 sqInt imageFormatVersionNumber = 6502;
@@ -1475,7 +1477,7 @@ const char* obsoleteNamedPrimitiveTable[][3] = {
 { NULL, NULL, NULL }
 };
 struct VirtualMachine* interpreterProxy;
-void *primitiveTable[580] = {
+void *primitiveTable[578] = {
 	/* 0*/ (void *)primitiveFail,
 	/* 1*/ (void *)primitiveAdd,
 	/* 2*/ (void *)primitiveSubtract,
@@ -2052,9 +2054,7 @@ void *primitiveTable[580] = {
 	/* 573*/ (void *)primitiveListExternalModule,
 	/* 574*/ (void *)primitiveFail,
 	/* 575*/ (void *)primitiveAsHandle,
-	/* 576*/ (void *)primitiveHandleClass,
-	/* 577*/ (void *)primitiveHandleAddInstVar,
-	/* 578*/ (void *)primitiveFail,
+	/* 576*/ (void *)primitiveFail,
  0 };
 usqInt memory;
 void* showSurfaceFn;
@@ -5306,6 +5306,68 @@ register struct foo * foo = &fum;
 	}
 }
 
+EXPORT(sqInt) handlepropagateValue(sqInt aHandle, sqInt aObject) {
+register struct foo * foo = &fum;
+    sqInt handleMetaClass;
+    sqInt handleClass;
+    sqInt sp;
+    sqInt sp1;
+    sqInt sp2;
+    sqInt ccIndex;
+    sqInt ccIndex1;
+
+	if ((aObject & 1) == 0) {
+		/* begin fetchClassOf: */
+		if ((aHandle & 1)) {
+			handleClass = longAt((foo->specialObjectsOop + BaseHeaderSize) + (ClassInteger << ShiftForWord));
+			goto l1;
+		}
+		ccIndex = (((usqInt) (longAt(aHandle))) >> 12) & 31;
+		if (ccIndex == 0) {
+			handleClass = (longAt(aHandle - BaseHeaderSize)) & AllButTypeMask;
+			goto l1;
+		} else {
+			handleClass = longAt(((longAt((foo->specialObjectsOop + BaseHeaderSize) + (CompactClasses << ShiftForWord))) + BaseHeaderSize) + ((ccIndex - 1) << ShiftForWord));
+			goto l1;
+		}
+	l1:	/* end fetchClassOf: */;
+		/* begin fetchClassOf: */
+		if ((handleClass & 1)) {
+			handleMetaClass = longAt((foo->specialObjectsOop + BaseHeaderSize) + (ClassInteger << ShiftForWord));
+			goto l2;
+		}
+		ccIndex1 = (((usqInt) (longAt(handleClass))) >> 12) & 31;
+		if (ccIndex1 == 0) {
+			handleMetaClass = (longAt(handleClass - BaseHeaderSize)) & AllButTypeMask;
+			goto l2;
+		} else {
+			handleMetaClass = longAt(((longAt((foo->specialObjectsOop + BaseHeaderSize) + (CompactClasses << ShiftForWord))) + BaseHeaderSize) + ((ccIndex1 - 1) << ShiftForWord));
+			goto l2;
+		}
+	l2:	/* end fetchClassOf: */;
+		/* begin push: */
+		longAtput(sp = foo->stackPointer + BytesPerWord, handleClass);
+		foo->stackPointer = sp;
+		/* begin push: */
+		longAtput(sp1 = foo->stackPointer + BytesPerWord, aObject);
+		foo->stackPointer = sp1;
+		foo->messageSelector = longAt((foo->specialObjectsOop + BaseHeaderSize) + (HandlePropagationSelectorIndex << ShiftForWord));
+
+		/* Sending message Part */
+		/* From here   */
+
+		foo->argumentCount = 1;
+		lookupMethodInClass(handleMetaClass);
+		foo->lkupClass = handleMetaClass;
+		addNewMethodToCache();
+		activateNewMethod();
+	} else {
+		/* begin push: */
+		longAtput(sp2 = foo->stackPointer + BytesPerWord, aObject);
+		foo->stackPointer = sp2;
+	}
+}
+
 
 /*	This VM is forwards-compatible with the immediately following closure version, and
 	 will write the new version number in snapshots if the closure creation bytecode is used. */
@@ -6586,7 +6648,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6596,14 +6660,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6617,7 +6704,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6627,14 +6716,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6648,7 +6760,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6658,14 +6772,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6679,7 +6816,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6689,14 +6828,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6710,7 +6872,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6720,14 +6884,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6741,7 +6928,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6751,14 +6940,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6772,7 +6984,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6782,14 +6996,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6803,7 +7040,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6813,14 +7052,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6834,7 +7096,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6844,14 +7108,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6865,7 +7152,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6875,14 +7164,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6896,7 +7208,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6906,14 +7220,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6927,7 +7264,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6937,14 +7276,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6958,7 +7320,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6968,14 +7332,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -6989,7 +7376,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -6999,14 +7388,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -7020,7 +7432,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -7030,14 +7444,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -7051,7 +7488,9 @@ register struct foo * foo = &fum;
 			{
 				sqInt fieldIndex;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				flag("requires currentBytecode to be expanded to a constant");
 				/* begin fetchNextBytecode */
@@ -7061,14 +7500,37 @@ register struct foo * foo = &fum;
 				if (internalIsHandle(foo->receiver)) {
 					/* begin pushReceiverVariableInHandle:ofObject: */
 					aHandle = foo->receiver;
-					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-						stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-						/* begin internalPush: */
-						object = stObjectat(stateArray, fieldIndex + 1);
-						longAtPointerput(localSP += BytesPerWord, object);
+					if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+						/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							value = stObjectat(stateArray1, fieldIndex + 1);
+						} else {
+							value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord));
+						}
+						localIP -= 1;
+						/* begin externalizeIPandSP */
+						foo->instructionPointer = oopForPointer(localIP);
+						foo->stackPointer = oopForPointer(localSP);
+						foo->theHomeContext = localHomeContext;
+						handlepropagateValue(aHandle, value);
+						/* begin internalizeIPandSP */
+						localIP = pointerForOop(foo->instructionPointer);
+						localSP = pointerForOop(foo->stackPointer);
+						localHomeContext = foo->theHomeContext;
+						/* begin fetchNextBytecode */
+						currentBytecode = byteAtPointer(++localIP);
 					} else {
-						/* begin internalPush: */
-						longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+							stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+							/* begin internalPush: */
+							object = stObjectat(stateArray2, fieldIndex + 1);
+							longAtPointerput(localSP += BytesPerWord, object);
+						} else {
+							/* begin internalPush: */
+							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (fieldIndex << ShiftForWord)));
+						}
 					}
 				} else {
 					/* begin internalPush: */
@@ -8737,7 +9199,9 @@ register struct foo * foo = &fum;
 				sqInt variableIndex;
 				sqInt variableType;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				descriptor = byteAtPointer(++localIP);
 				/* begin fetchNextBytecode */
@@ -8749,14 +9213,37 @@ register struct foo * foo = &fum;
 					if (internalIsHandle(foo->receiver)) {
 						/* begin pushReceiverVariableInHandle:ofObject: */
 						aHandle = foo->receiver;
-						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-							stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-							/* begin internalPush: */
-							object = stObjectat(stateArray, variableIndex + 1);
-							longAtPointerput(localSP += BytesPerWord, object);
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+							/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+							if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+								stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+								value = stObjectat(stateArray1, variableIndex + 1);
+							} else {
+								value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (variableIndex << ShiftForWord));
+							}
+							localIP -= 1;
+							/* begin externalizeIPandSP */
+							foo->instructionPointer = oopForPointer(localIP);
+							foo->stackPointer = oopForPointer(localSP);
+							foo->theHomeContext = localHomeContext;
+							handlepropagateValue(aHandle, value);
+							/* begin internalizeIPandSP */
+							localIP = pointerForOop(foo->instructionPointer);
+							localSP = pointerForOop(foo->stackPointer);
+							localHomeContext = foo->theHomeContext;
+							/* begin fetchNextBytecode */
+							currentBytecode = byteAtPointer(++localIP);
 						} else {
-							/* begin internalPush: */
-							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (variableIndex << ShiftForWord)));
+							/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+							if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+								stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+								/* begin internalPush: */
+								object = stObjectat(stateArray2, variableIndex + 1);
+								longAtPointerput(localSP += BytesPerWord, object);
+							} else {
+								/* begin internalPush: */
+								longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (variableIndex << ShiftForWord)));
+							}
 						}
 					} else {
 						/* begin internalPush: */
@@ -8978,6 +9465,7 @@ register struct foo * foo = &fum;
 						}
 					l44:	/* end fetchClassOf: */;
 					}
+					foo->receiverClass = foo->lkupClass;
 				} else {
 					foo->receiverClass = foo->lkupClass;
 				}
@@ -9002,12 +9490,14 @@ register struct foo * foo = &fum;
 				sqInt needsLarge;
 				sqInt i;
 				sqInt argCount2;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
+				sqInt object;
 				sqInt activeCntx;
 				sqInt valuePointer;
 				sqInt valuePointer1;
 				sqInt tmp;
-				sqInt stateArray;
-				sqInt object;
 				/* begin internalFindNewMethod */
 				/* begin lookupInMethodCacheSel:class: */
 				hash = foo->messageSelector ^ foo->lkupClass;
@@ -9054,22 +9544,42 @@ register struct foo * foo = &fum;
 				}
 				/* begin internalExecuteNewMethod */
 				localPrimIndex = foo->primitiveIndex;
-				rcvr = longAtPointer(localSP);
+				rcvr = longAtPointer(localSP - (foo->argumentCount * BytesPerWord));
 				if (localPrimIndex > 0) {
 					if ((localPrimIndex > 255) && (localPrimIndex < 520)) {
 						if (localPrimIndex >= 264) {
 							if (internalIsHandle(rcvr)) {
 								/* begin internalPop: */
 								localSP -= 1 * BytesPerWord;
-								/* begin pushReceiverVariableInHandle:ofObject: */
-								if ((((usqInt) (longAt((rcvr + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-									stateArray = longAt((rcvr + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-									/* begin internalPush: */
-									object = stObjectat(stateArray, (localPrimIndex - 264) + 1);
-									longAtPointerput(localSP += BytesPerWord, object);
+								/* begin quickPushReceiverVariableInHandle:ofObject: */
+								if ((((usqInt) (longAt((rcvr + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+									/* begin quickPushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+									if ((((usqInt) (longAt((rcvr + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+										stateArray1 = longAt((rcvr + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+										value = stObjectat(stateArray1, (localPrimIndex - 264) + 1);
+									} else {
+										value = longAt(((longAt((rcvr + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + ((localPrimIndex - 264) << ShiftForWord));
+									}
+									/* begin externalizeIPandSP */
+									foo->instructionPointer = oopForPointer(localIP);
+									foo->stackPointer = oopForPointer(localSP);
+									foo->theHomeContext = localHomeContext;
+									handlepropagateValue(rcvr, value);
+									/* begin internalizeIPandSP */
+									localIP = pointerForOop(foo->instructionPointer);
+									localSP = pointerForOop(foo->stackPointer);
+									localHomeContext = foo->theHomeContext;
 								} else {
-									/* begin internalPush: */
-									longAtPointerput(localSP += BytesPerWord, longAt(((longAt((rcvr + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + ((localPrimIndex - 264) << ShiftForWord)));
+									/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+									if ((((usqInt) (longAt((rcvr + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+										stateArray2 = longAt((rcvr + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+										/* begin internalPush: */
+										object = stObjectat(stateArray2, (localPrimIndex - 264) + 1);
+										longAtPointerput(localSP += BytesPerWord, object);
+									} else {
+										/* begin internalPush: */
+										longAtPointerput(localSP += BytesPerWord, longAt(((longAt((rcvr + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + ((localPrimIndex - 264) << ShiftForWord)));
+									}
 								}
 								goto l47;
 							}
@@ -9101,10 +9611,7 @@ register struct foo * foo = &fum;
 						}
 					} else {
 						if (internalIsHandle(rcvr)) {
-							/* begin internalPop: */
-							localSP -= 1 * BytesPerWord;
-							/* begin internalPush: */
-							longAtPointerput(localSP += BytesPerWord, longAt((rcvr + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord)));
+							longAtPointerput(localSP - (foo->argumentCount * BytesPerWord), longAt((rcvr + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord)));
 						}
 						/* begin externalizeIPandSP */
 						foo->instructionPointer = oopForPointer(localIP);
@@ -9227,7 +9734,9 @@ register struct foo * foo = &fum;
 				sqInt oop1;
 				sqInt oop2;
 				sqInt aHandle;
-				sqInt stateArray;
+				sqInt value;
+				sqInt stateArray1;
+				sqInt stateArray2;
 				sqInt object;
 				byte2 = byteAtPointer(++localIP);
 				byte3 = byteAtPointer(++localIP);
@@ -9251,14 +9760,37 @@ register struct foo * foo = &fum;
 					if (internalIsHandle(foo->receiver)) {
 						/* begin pushReceiverVariableInHandle:ofObject: */
 						aHandle = foo->receiver;
-						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
-							stateArray = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
-							/* begin internalPush: */
-							object = stObjectat(stateArray, byte3 + 1);
-							longAtPointerput(localSP += BytesPerWord, object);
+						if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 8) {
+							/* begin pushPropagatedReceiverVariableThrougtHandle:ofHandle: */
+							if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+								stateArray1 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+								value = stObjectat(stateArray1, byte3 + 1);
+							} else {
+								value = longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (byte3 << ShiftForWord));
+							}
+							localIP -= 1;
+							/* begin externalizeIPandSP */
+							foo->instructionPointer = oopForPointer(localIP);
+							foo->stackPointer = oopForPointer(localSP);
+							foo->theHomeContext = localHomeContext;
+							handlepropagateValue(aHandle, value);
+							/* begin internalizeIPandSP */
+							localIP = pointerForOop(foo->instructionPointer);
+							localSP = pointerForOop(foo->stackPointer);
+							localHomeContext = foo->theHomeContext;
+							/* begin fetchNextBytecode */
+							currentBytecode = byteAtPointer(++localIP);
 						} else {
-							/* begin internalPush: */
-							longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (byte3 << ShiftForWord)));
+							/* begin pushReceiverVariableThrougtHandle:ofHandle: */
+							if ((((usqInt) (longAt((aHandle + BaseHeaderSize) + (HandleConfigurationIndex << ShiftForWord)))) >> 1) & 1) {
+								stateArray2 = longAt((aHandle + BaseHeaderSize) + (HandleStateIndex << ShiftForWord));
+								/* begin internalPush: */
+								object = stObjectat(stateArray2, byte3 + 1);
+								longAtPointerput(localSP += BytesPerWord, object);
+							} else {
+								/* begin internalPush: */
+								longAtPointerput(localSP += BytesPerWord, longAt(((longAt((aHandle + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord))) + BaseHeaderSize) + (byte3 << ShiftForWord)));
+							}
 						}
 					} else {
 						/* begin internalPush: */
@@ -11989,7 +12521,6 @@ sqInt isActiveMetaHandle(sqInt oop) {
     sqInt receiverOfHandle;
 
 	receiverOfHandle = longAt((oop + BaseHeaderSize) + (HandleReceiverIndex << ShiftForWord));
-	printNameOfClasscount(fetchClassOf(receiverOfHandle), 1);
 	/* begin internalIsHandle: */
 	if ((receiverOfHandle & 1) == 0) {
 		return ((longAt(receiverOfHandle)) & HandleBit) != 0;
@@ -25774,22 +26305,23 @@ void* vm_exports[][3] = {
 	{"", "dumpImage", (void*)dumpImage},
 	{"", "addGCRoot", (void*)addGCRoot},
 	{"", "callbackLeave", (void*)callbackLeave},
-	{"", "callbackEnter", (void*)callbackEnter},
 	{"", "primitiveIsRoot", (void*)primitiveIsRoot},
 	{"", "primitiveRootTableAt", (void*)primitiveRootTableAt},
-	{"", "primitiveChangeClassWithClass", (void*)primitiveChangeClassWithClass},
+	{"", "callbackEnter", (void*)callbackEnter},
+	{"", "handlepropagateValue", (void*)handlepropagateValue},
 	{"", "primitiveIsYoung", (void*)primitiveIsYoung},
+	{"", "primitiveChangeClassWithClass", (void*)primitiveChangeClassWithClass},
 	{"", "internalIsMutable", (void*)internalIsMutable},
 	{"", "callInterpreter", (void*)callInterpreter},
 	{"", "internalIsImmutable", (void*)internalIsImmutable},
 	{"", "primitiveAsHandle", (void*)primitiveAsHandle},
 	{"", "sendInvokeCallbackStackRegistersJmpbuf", (void*)sendInvokeCallbackStackRegistersJmpbuf},
+	{"", "primitiveForceTenure", (void*)primitiveForceTenure},
 	{"", "primitiveSetGCSemaphore", (void*)primitiveSetGCSemaphore},
 	{"", "moduleUnloaded", (void*)moduleUnloaded},
-	{"", "primitiveDisablePowerManager", (void*)primitiveDisablePowerManager},
 	{"", "primitiveScreenDepth", (void*)primitiveScreenDepth},
-	{"", "primitiveForceTenure", (void*)primitiveForceTenure},
 	{"", "primitiveHandleClass", (void*)primitiveHandleClass},
+	{"", "primitiveDisablePowerManager", (void*)primitiveDisablePowerManager},
 	{"", "primitiveHandleAddInstVar", (void*)primitiveHandleAddInstVar},
 	{"", "removeGCRoot", (void*)removeGCRoot},
 	{"", "getStackPointer", (void*)getStackPointer},

@@ -1,4 +1,4 @@
-/* Automatically generated from Squeak on 8 October 2010 2:26:22 pm 
+/* Automatically generated from Squeak on 19 January 2011 4:29:56 pm 
    by VMMaker 3.11.13
  */
 
@@ -229,9 +229,9 @@ static float* litVertex;
 static sqInt loadBBFn;
 static const char *moduleName =
 #ifdef SQUEAK_BUILTIN_PLUGIN
-	"Squeak3D 8 October 2010 (i)"
+	"Squeak3D 19 January 2011 (i)"
 #else
-	"Squeak3D 8 October 2010 (e)"
+	"Squeak3D 19 January 2011 (e)"
 #endif
 ;
 static float* primLight;
