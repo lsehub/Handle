@@ -1,0 +1,2 @@
+s%\[GSTREAMER_CFLAGS\]%%g
+s%\[GSTREAMER_LIBS\]%%g

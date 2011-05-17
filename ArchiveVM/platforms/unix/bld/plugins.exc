@@ -1,0 +1,16 @@
+DBusPlugin
+GStreamerPlugin
+MIDIPlugin
+OggPlugin
+RomePlugin
+SqueakFFIPrims
+VideoForLinuxPlugin
+XDisplayControlPlugin
+vm-display-X11
+vm-display-custom
+vm-display-fbdev
+vm-sound-ALSA
+vm-sound-NAS
+vm-sound-OSS
+vm-sound-Sun
+vm-sound-custom
